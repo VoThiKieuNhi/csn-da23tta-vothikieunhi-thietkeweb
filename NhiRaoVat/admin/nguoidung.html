@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Basic Page Info -->
+	<meta charset="utf-8" />
+	<title>Trang quản trị</title>
+
+	<!-- Site favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="../../vendors/images/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="../../vendors/images/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="../../vendors/images/favicon-16x16.png" />
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet" />
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="../../vendors/styles/core.css" />
+	<link rel="stylesheet" type="text/css" href="../../vendors/styles/icon-font.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../src/plugins/datatables/css/dataTables.bootstrap4.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../src/plugins/datatables/css/responsive.bootstrap4.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../vendors/styles/style.css" />
+
+	<style>
+		.switch {
+			position: relative;
+			display: inline-block;
+			width: 34px;
+			height: 20px;
+		}
+
+		.switch input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+		}
+
+		.slider {
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #ccc;
+			transition: 0.4s;
+			border-radius: 50px;
+		}
+
+		.slider:before {
+			position: absolute;
+			content: "";
+			height: 12px;
+			width: 12px;
+			border-radius: 50%;
+			left: 4px;
+			bottom: 4px;
+			background-color: white;
+			transition: 0.4s;
+		}
+
+		input:checked+.slider {
+			background-color: #4CAF50;
+		}
+
+		input:checked+.slider:before {
+			transform: translateX(14px);
+		}
+
+		.table {
+			width: 100%;
+			table-layout: fixed;
+		}
+
+		.table th,
+		.table td {
+			word-wrap: break-word;
+			white-space: nowrap;
+		}
+
+		.btn-group .btn {
+			margin-right: 4px;
+			border-radius: 6px !important;
+		}
+
+		.btn-group .btn i {
+			font-size: 14px;
+		}
+
+		.badge {
+			padding: 6px 10px;
+			font-size: 12px;
+			border-radius: 12px;
+			text-transform: capitalize;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="header">
+		<div class="header-left">
+			<div class="menu-icon bi bi-list"></div>
+			<div class="search-toggle-icon bi bi-search" data-toggle="header_search"></div>
+			<div class="header-search">
+				<form>
+					<div class="form-group mb-0">
+						<i class="dw dw-search2 search-icon"></i>
+						<input type="text" class="form-control search-input" placeholder="Tìm kiếm..." />
+						<div class="dropdown">
+							<a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown">
+								<i class="ion-arrow-down-c"></i>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right">
+								<div class="form-group row">
+									<label class="col-sm-12 col-md-2 col-form-label">From</label>
+									<div class="col-sm-12 col-md-10">
+										<input class="form-control form-control-sm form-control-line" type="text" />
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-sm-12 col-md-2 col-form-label">To</label>
+									<div class="col-sm-12 col-md-10">
+										<input class="form-control form-control-sm form-control-line" type="text" />
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-sm-12 col-md-2 col-form-label">Subject</label>
+									<div class="col-sm-12 col-md-10">
+										<input class="form-control form-control-sm form-control-line" type="text" />
+									</div>
+								</div>
+								<div class="text-right">
+									<button class="btn btn-primary">Search</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="header-right">
+			<div class="dashboard-setting user-notification">
+				<div class="dropdown">
+					<a class="dropdown-toggle no-arrow" href="javascript:;" data-toggle="right-sidebar">
+						<i class="dw dw-settings2"></i>
+					</a>
+				</div>
+			</div>
+			<div class="user-notification">
+				<div class="dropdown">
+					<a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown">
+						<i class="icon-copy dw dw-notification"></i>
+						<span class="badge notification-active"></span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<div class="notification-list mx-h-350 customscroll">
+							<ul>
+								<li>
+									<a href="#">
+										<img src="../../vendors/images/img.jpg" alt="" />
+										<h3>John Doe</h3>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing
+											elit, sed...
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../../vendors/images/photo1.jpg" alt="" />
+										<h3>Lea R. Frith</h3>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing
+											elit, sed...
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../../vendors/images/photo2.jpg" alt="" />
+										<h3>Erik L. Richards</h3>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing
+											elit, sed...
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../../vendors/images/photo3.jpg" alt="" />
+										<h3>John Doe</h3>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing
+											elit, sed...
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../../vendors/images/photo4.jpg" alt="" />
+										<h3>Renee I. Hansen</h3>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing
+											elit, sed...
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../../vendors/images/img.jpg" alt="" />
+										<h3>Vicki M. Coleman</h3>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing
+											elit, sed...
+										</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="user-info-dropdown">
+				<div class="dropdown">
+					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+						<span class="user-icon">
+							<img src="vendors/images/9706640 (1).png" alt="" />
+						</span>
+						<span class="user-name">Admin</span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+						<a class="dropdown-item" href="../profile.html"><i class="dw dw-user1"></i> Profile</a>
+						<a class="dropdown-item" href="../login.html"><i class="dw dw-logout"></i> Đăng xuất</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="right-sidebar">
+		<div class="sidebar-title">
+			<h3 class="weight-600 font-16 text-blue">
+				Layout Settings
+				<span class="btn-block font-weight-400 font-12">User Interface Settings</span>
+			</h3>
+			<div class="close-sidebar" data-toggle="right-sidebar-close">
+				<i class="icon-copy ion-close-round"></i>
+			</div>
+		</div>
+		<div class="right-sidebar-body customscroll">
+			<div class="right-sidebar-body-content">
+				<h4 class="weight-600 font-18 pb-10">Header Background</h4>
+				<div class="sidebar-btn-group pb-30 mb-10">
+					<a href="javascript:void(0);" class="btn btn-outline-primary header-white active">White</a>
+					<a href="javascript:void(0);" class="btn btn-outline-primary header-dark">Dark</a>
+				</div>
+
+				<h4 class="weight-600 font-18 pb-10">Sidebar Background</h4>
+				<div class="sidebar-btn-group pb-30 mb-10">
+					<a href="javascript:void(0);" class="btn btn-outline-primary sidebar-light">White</a>
+					<a href="javascript:void(0);" class="btn btn-outline-primary sidebar-dark active">Dark</a>
+				</div>
+
+				<h4 class="weight-600 font-18 pb-10">Menu Dropdown Icon</h4>
+				<div class="sidebar-radio-group pb-10 mb-10">
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="sidebaricon-1" name="menu-dropdown-icon" class="custom-control-input"
+							value="icon-style-1" checked="" />
+						<label class="custom-control-label" for="sidebaricon-1"><i class="fa fa-angle-down"></i></label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="sidebaricon-2" name="menu-dropdown-icon" class="custom-control-input"
+							value="icon-style-2" />
+						<label class="custom-control-label" for="sidebaricon-2"><i class="ion-plus-round"></i></label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="sidebaricon-3" name="menu-dropdown-icon" class="custom-control-input"
+							value="icon-style-3" />
+						<label class="custom-control-label" for="sidebaricon-3"><i
+								class="fa fa-angle-double-right"></i></label>
+					</div>
+				</div>
+
+				<h4 class="weight-600 font-18 pb-10">Menu List Icon</h4>
+				<div class="sidebar-radio-group pb-30 mb-10">
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="sidebariconlist-1" name="menu-list-icon" class="custom-control-input"
+							value="icon-list-style-1" checked="" />
+						<label class="custom-control-label" for="sidebariconlist-1"><i
+								class="ion-minus-round"></i></label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="sidebariconlist-2" name="menu-list-icon" class="custom-control-input"
+							value="icon-list-style-2" />
+						<label class="custom-control-label" for="sidebariconlist-2"><i class="fa fa-circle-o"
+								aria-hidden="true"></i></label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="sidebariconlist-3" name="menu-list-icon" class="custom-control-input"
+							value="icon-list-style-3" />
+						<label class="custom-control-label" for="sidebariconlist-3"><i class="dw dw-check"></i></label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="sidebariconlist-4" name="menu-list-icon" class="custom-control-input"
+							value="icon-list-style-4" checked="" />
+						<label class="custom-control-label" for="sidebariconlist-4"><i
+								class="icon-copy dw dw-next-2"></i></label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="sidebariconlist-5" name="menu-list-icon" class="custom-control-input"
+							value="icon-list-style-5" />
+						<label class="custom-control-label" for="sidebariconlist-5"><i
+								class="dw dw-fast-forward-1"></i></label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="sidebariconlist-6" name="menu-list-icon" class="custom-control-input"
+							value="icon-list-style-6" />
+						<label class="custom-control-label" for="sidebariconlist-6"><i class="dw dw-next"></i></label>
+					</div>
+				</div>
+
+				<div class="reset-options pt-30 text-center">
+					<button class="btn btn-danger" id="reset-settings">
+						Reset Settings
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="left-side-bar">
+		<div class="brand-logo">
+			<a href="../index.html">
+				
+			</a>
+			<div class="close-sidebar" data-toggle="left-sidebar-close">
+				<i class="ion-close-round"></i>
+			</div>
+		</div>
+		<div class="menu-block customscroll">
+			<div class="sidebar-menu">
+				<ul id="accordion-menu">
+					<li>
+						<a href="index.html" class="dropdown-toggle no-arrow">
+							<span class="micon bi bi-house-door"></span><span class="mtext">Trang chủ</span>
+						</a>
+					</li>
+
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-person"></span><span class="mtext">Quản lý người dùng</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="nguoidung.html">Danh sách</a></li>
+						</ul>
+					</li>
+
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-box"></span><span class="mtext">Quản lý bài đăng</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="baidang.html">Danh sách</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-menu-overlay"></div>
+
+	<div class="main-container">
+		<div class="pd-ltr-20 xs-pd-20-10">
+			<div class="min-height-200px">
+				<div class="page-header">
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="title">
+								<h4>Danh sách</h4>
+							</div>
+							<nav aria-label="breadcrumb" role="navigation">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item">
+										<a href="../index.html">Trang chủ</a>
+									</li>
+									<li class="breadcrumb-item active" aria-current="page">
+										Quản lý người dùng
+									</li>
+								</ol>
+							</nav>
+						</div>
+						<div class="col-md-6 col-sm-12 text-right">
+							<div class="dropdown">
+								<a class="btn btn-primary dropdown-toggle" href="#" role="button"
+									data-toggle="dropdown">
+									Xuất file
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#">Excel</a>
+									<a class="dropdown-item" href="#">PDF</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Simple Datatable start -->
+				<div class="card-box mb-30">
+					<div class="pd-20">
+						<h4 class="text-blue h4">Quản lý người dùng</h4>
+					</div>
+
+					<div class="pb-20">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>Tên</th>
+									<th>Email</th>
+									<th>Phone</th>
+									<th>Role</th>
+									<th>Trạng thái</th>
+									<th>Hành động</th>
+								</tr>
+							</thead>
+							<tbody id="userTable"></tbody>
+						</table>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../../vendors/scripts/core.js"></script>
+	<script src="../../vendors/scripts/script.min.js"></script>
+	<script src="../../vendors/scripts/process.js"></script>
+	<script src="../../vendors/scripts/layout-settings.js"></script>
+	<script src="../../src/plugins/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="../../src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+	<script src="../../src/plugins/datatables/js/dataTables.responsive.min.js"></script>
+	<script src="../../src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+	<!-- buttons for Export datatable -->
+	<script src="../../src/plugins/datatables/js/dataTables.buttons.min.js"></script>
+	<script src="../../src/plugins/datatables/js/buttons.bootstrap4.min.js"></script>
+	<script src="../../src/plugins/datatables/js/buttons.print.min.js"></script>
+	<script src="../../src/plugins/datatables/js/buttons.html5.min.js"></script>
+	<script src="../../src/plugins/datatables/js/buttons.flash.min.js"></script>
+	<script src="../../src/plugins/datatables/js/pdfmake.min.js"></script>
+	<script src="../../src/plugins/datatables/js/vfs_fonts.js"></script>
+	<script>
+		$(document).ready(function () {
+			if ($.fn.dataTable.isDataTable('.data-table')) {
+				$('.data-table').DataTable().destroy();
+			}
+
+			$('.data-table').DataTable({
+				responsive: true,
+				autoWidth: false,
+			});
+		});
+	</script>
+
+	<script>
+		const userTable = document.getElementById("userTable");
+		let users = JSON.parse(localStorage.getItem("users")) || [];
+
+		function renderUsers() {
+			userTable.innerHTML = "";
+
+			users.forEach(u => {
+				const tr = document.createElement("tr");
+
+				tr.innerHTML = `
+            <td>${u.id}</td>
+            <td>${u.username}</td>
+            <td>${u.email}</td>
+            <td>${u.phone || ""}</td>
+            <td>${u.role}</td>
+            <td>
+                <span style="font-weight:bold;color:
+                    ${u.status === "active" ? "green" :
+						u.status === "pending" ? "orange" : "red"}">
+                    ${u.status}
+                </span>
+            </td>
+            <td>
+                <div class="btn-group" role="group">
+    <button class="btn btn-sm btn-success" title="Duyệt"
+        onclick="approveUser(${u.id})">
+        <i class="dw dw-check"></i>
+    </button>
+
+    <button class="btn btn-sm btn-warning" title="Khoá"
+        onclick="blockUser(${u.id})">
+        <i class="dw dw-ban"></i>
+    </button>
+
+    <button class="btn btn-sm btn-danger" title="Xoá"
+        onclick="deleteUser(${u.id})">
+        <i class="dw dw-delete-3"></i>
+    </button>
+</div>
+
+            </td>
+        `;
+				userTable.appendChild(tr);
+			});
+		}
+
+		function approveUser(id) {
+			users = users.map(u =>
+				u.id === id ? { ...u, status: "active" } : u
+			);
+			save();
+		}
+
+		function blockUser(id) {
+			users = users.map(u =>
+				u.id === id ? { ...u, status: "blocked" } : u
+			);
+			save();
+		}
+
+		function deleteUser(id) {
+			if (!confirm("Xoá người dùng này?")) return;
+			users = users.filter(u => u.id !== id);
+			save();
+		}
+
+		function save() {
+			localStorage.setItem("users", JSON.stringify(users));
+			renderUsers();
+		}
+
+		renderUsers();
+	</script>
+
+</body>
+
+</html>

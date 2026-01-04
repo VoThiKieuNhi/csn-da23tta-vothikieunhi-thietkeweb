@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Language" content="vi" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name='viewport'
+        content='viewport-fit=cover, width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <title>Mạng rao vặt, mua bán, hàng mới về, đồ cổ, đồ cũ, đồ secondhand, Việt Nam - Mạng rao vặt, mua bán, hàng mới
+        về, đồ cũ, đồ secondhand, Việt Nam</title>
+    <script src="/callback_js/init.js?ver=2022.02.07.1" type="text/javascript"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://fb02e1218898fb02e129e73.zapwp.com/generate_js:true"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="htmlContent">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <div id="prloading"><span class="ld-text"><img src="/images/connecting.gif" width="48"
+                            border="0"></span></div>
+                <div class="notification-nav visible-xs">
+                    <div class="notification notification-button pull-right"><a tabindex="0" role="button"
+                            data-toggle="popover" data-trigger="focus" data-placement="bottom"><i
+                                class="fa fa-bell fa-fw bottom"></i><span class="count notificount"
+                                style="display: none"></span></a></div>
+                </div>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand reload" href="index.html"><img src="images/logo.jpg" width="165"
+                        border="0" /></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav navbar-right bar-top">
+                    <li class="lf-postad visible-md visible-lg" id="postAdBtn"><a href="dangtin.html"><i
+                                class="fa fa-commenting fa-fw" aria-hidden="true"></i> Đăng tin <span
+                                class="hidden-xs">miễn phí</span></a></li>
+                    <li class="visible-xs"><a href="timkiem.html"><i class="fa fa-search fa-fw" aria-hidden="true"></i>
+                            Tìm
+                            kiếm</a></li>
+
+
+                    <li class="hidden-xs" id="userLoggedBox">
+                        <div class="pull-right avatar">
+                            <div class='avatar-img32' id='usrAvt'><a tabindex="0" data-placement="bottom" role="button"
+                                    data-toggle="popover" data-trigger="focus">
+                                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR99-ZMZeEtYlFVdT-HN3Hz0f_i64Zf76D67g&s'
+                                        alt='avatar' /></a></div>
+                            <div class='usrAvtBox' id='usrAvtText' style="display:none">
+                                <div class='avatar-text'>
+                                    <div class='usr-name'><i class='fa fa-info-circle fa-fw'></i> Kieu Nhi</div>
+                                </div>
+                                <div class='avatar-text'>
+                                    <div class='user-email'><i class='fa fa-envelope fa-fw'></i> vonhi@gmail.com
+                                    </div>
+                                </div>
+                                <div class='avatar-text'>
+                                    <div class='avt-link'><a href='quanly.html'><i class='fa fa-wpforms fa-fw'></i> Bản
+                                            tin
+                                            đã đăng <span class='n-posts'>0</span></a></div>
+                                </div>
+                                <div class='avatar-text'>
+                                    <div class='user-info'><a href='#'><i class='fa fa-user-circle-o fa-fw'></i> Chỉnh
+                                            sửa thông tin</a></div>
+                                </div>
+
+                                <div class='avatar-text'>
+                                    <div class='user-info'>
+                                        <a href="#" onclick="logout()">
+                                            <i class='fa fa-sign-out fa-fw'></i> Đăng xuất
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class='avatar-last-login'><i class='fa fa-history fa-fw'></i> <span
+                                        class='small'>Đăng nhập gần đây 12:24 - 20/11/2025</span></div>
+                                <div class='clearfix'></div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right bar-bellow" id="loginMenu">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false"><i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i> Đăng
+                            nhập<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="dangtin.html"><i class="fa fa-commenting fa-fw rvn-blue"></i> Đăng tin rao
+                                    vặt</a>
+                            </li>
+                            <li><a href="quanly.html"><i class="fa fa-wpforms fa-fw"></i> Chỉnh sửa, nâng cấp bản
+                                    tin</a>
+                            </li>
+                            <li><a href="login.html"><i class="fa fa-user fa-fw"></i> Thông tin tài khoản</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <span id="top-link-block" class="hidden">
+        <a href="#top" onclick="$('html,body').animate({scrollTop:0},'slow');return false;"></a>
+    </span>
+<script>
+  document.querySelector('.menu-toggle').onclick = function () {
+    document.querySelector('.menu').classList.toggle('active');
+  }
+</script>
+</body>
+    <!-- child of the body tag -->
+
+    <div id="pgContent" class="clearfix">
+        <div class="rvn-menu-bar hidden-xs">
+            <form id="frmSearchBar" class="frmSearch" action="timkiem.html" method="get">
+                <div class="container">
+                    <div class="rvn-menu-city" id="loca_select">
+                        <select id='search_place' name='search_place' class='chosen-select form-control'>
+                            <option value='0'>Toàn quốc</option>
+                            <option value='1'>Hà Nội</option>'<option value='11'>Hồ Chí Minh</option>'<option
+                                value='250'>Bình Dương</option>'<option value='53'>Hải Phòng</option>'<option value='2'>
+                                Huế</option>'<option value='210'>Cần Thơ</option>'<option value='4'>Đà Nẵng</option>'
+                            <option value='14'>Khánh Hòa</option>'<option value='195'>An Giang</option>'<option
+                                value='233'>Bình Phước</option>'<option value='238'>Bình Định</option>'<option
+                                value='9'>Bình Thuận</option>'<option value='228'>Bạc Liêu</option>'<option value='6'>
+                                Phú Yên</option>'<option value='268'>Bắc Giang</option>'<option value='260'>Bắc Ninh
+                            </option>'<option value='254'>Bến Tre</option>'<option value='269'>Bắc Kạn</option>'<option
+                                value='523'>Cao Bằng</option>'<option value='192'>Cà Mau</option>'<option value='181'>
+                                Đắk Lắk</option>'<option value='784'>Đắk Nông</option>'<option value='216'>Đồng Nai
+                            </option>'<option value='71'>Đồng Tháp</option>'<option value='792'>Điện Biên</option>'
+                            <option value='72'>Gia Lai</option>'<option value='77'>Hà Giang</option>'<option
+                                value='109'>Hà Nam</option>'<option value='98'>Hà Tĩnh</option>'<option value='92'>Hải
+                                Dương</option>'<option value='540'>Hậu Giang</option>'<option value='130'>Hoà Bình
+                            </option>'<option value='277'>Vũng Tàu</option>'<option value='141'>Hưng Yên</option>'
+                            <option value='154'>Kiên Giang</option>'<option value='689'>Kon Tum</option>'<option
+                                value='175'>Lai Châu</option>'<option value='162'>Lào Cai</option>'<option value='285'>
+                                Lâm Đồng</option>'<option value='59'>Lạng Sơn</option>
+                        </select>
+                    </div>
+
+                    <div class="rvn-menu-cate">
+                        <select id='home_category' name='search_kat' class='chosen-select form-control'>
+                            <option value='0' add-data-content="<i class='fa fa-list fa-fw' aria-hidden='true'></i> ">
+                                Tất cả danh mục</option>
+                            <option value='11' add-data-content="<i class='fa fa-home fa-fw' aria-hidden='true'></i> ">
+                                Nhà cửa - Đất đai</option>
+                            <option value='75' add-data-content="<i class='fa fa-users fa-fw' aria-hidden='true'></i> ">
+                                Việc làm - Tuyển sinh</option>
+                            <option value='73' add-data-content="<i class='fa fa-cogs fa-fw' aria-hidden='true'></i> ">
+                                Cơ khí - Máy móc</option>
+                            <option value='2'
+                                add-data-content="<i class='fa fa-television fa-fw' aria-hidden='true'></i> ">Điện máy -
+                                Điện tử</option>
+                        </select>
+                    </div>
+
+                    <div class="rvn-menu-search">
+                        <div class="input-group">
+                            <input type="text" name="kw" id="kw" class="form-control typeahead" autocomplete="off"
+                                data-provide="typeahead" placeholder="Nhập thông tin cần tìm...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit">Tìm kiếm!</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="clearfix"></div>
+
+
+        <div class="container pgBody">
+
+            <div class="rvn-home-category ">
+                <div class="rows">
+                    <div class="col-md-9">
+                        <div class="cate-title " style="float:left" id="home-title"><a href="/kenh-rss"><i
+                                    class="fa fa-rss fa-fw"></i></a> Chuyên mục rao vặt <span class="hidden-xs"
+                                id="home-city-name"></span></div>
+                        <div class="autoSearch pull-right visible-xs">
+                            <form action="index.html" class="search-form frmSearch">
+                                <div class="form-group has-feedback" id="autoSearch">
+                                    <label for="search" class="sr-only">Search</label>
+                                    <input type="text" class="form-control typeahead" name="kw" data-provide="typeahead"
+                                        id="search" placeholder="Tìm kiếm">
+                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                </div>
+                                <input type="hidden" name="search_place" value="">
+                            </form>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="cate-icons rows" id="cateicons">
+
+                            <div class="cate-group main-cate-icon" data-cate="nha-dat">
+                                <div class="fa fa-home fa-3x"></div>
+                                <div class="cate-name">Bất động sản</div>
+                            </div>
+
+                            <div class="cate-group main-cate-icon" data-cate="viec-lam">
+                                <div class="fa fa-users fa-3x"></div>
+                                <div class="cate-name">Việc làm - Tuyển sinh</div>
+                            </div>
+
+                            <div class="cate-group main-cate-icon" data-cate="co-khi">
+                                <div class="fa fa-cogs fa-3x"></div>
+                                <div class="cate-name">Cơ khí - Máy móc</div>
+                            </div>
+
+                            <div class="cate-group main-cate-icon" data-cate="dien-tu">
+                                <div class="fa fa-television fa-3x"></div>
+                                <div class="cate-name">Điện máy - Điện tử</div>
+                            </div>
+
+                            <div class="cate-group main-cate-icon" data-cate="thoi-trang">
+                                <div class="fa fa-shopping-bag fa-3x"></div>
+                                <div class="cate-name">Thời trang - Làm đẹp</div>
+                            </div>
+
+                            <div class="cate-group main-cate-icon" data-cate="doi-song">
+                                <div class="fa fa-heart fa-3x"></div>
+                                <div class="cate-name">Đời sống - Xã hội</div>
+                            </div>
+
+                            <div class="cate-group main-cate-icon" data-cate="oto-xemay">
+                                <div class="fa fa-car fa-3x"></div>
+                                <div class="cate-name">Ô tô - Xe máy</div>
+                            </div>
+
+                            <div class="cate-group main-cate-icon" data-cate="may-tinh">
+                                <div class="fa fa-desktop fa-3x"></div>
+                                <div class="cate-name">Máy tính - Linh kiện</div>
+                            </div>
+
+                            <div class="cate-group main-cate-icon" data-cate="dich-vu">
+                                <div class="fa fa-handshake-o fa-3x"></div>
+                                <div class="cate-name">Dịch vụ</div>
+                            </div>
+
+                            <div class="cate-group main-cate-icon" data-cate="kinh-doanh">
+                                <div class="fa fa-line-chart fa-3x"></div>
+                                <div class="cate-name">Kinh doanh</div>
+                            </div>
+
+                            <div class="cate-group main-cate-icon" data-cate="hang-hoa">
+                                <div class="fa fa-cubes fa-3x"></div>
+                                <div class="cate-name">Hàng hóa - Vật liệu</div>
+                            </div>
+
+                            <div class="cate-group main-cate-icon" data-cate="cntt">
+                                <div class="fa fa-code fa-3x"></div>
+                                <div class="cate-name">Công nghệ thông tin</div>
+                            </div>
+
+                            <div class="cate-group main-cate-icon" data-cate="dien-thoai">
+                                <div class="fa fa-mobile fa-3x"></div>
+                                <div class="cate-name">Điện thoại - Phụ kiện</div>
+                            </div>
+
+                            <div class="cate-group main-cate-icon" data-cate="my-thuat">
+                                <div class="fa fa-paint-brush fa-3x"></div>
+                                <div class="cate-name">Mỹ thuật - Thiết kế</div>
+                            </div>
+
+                            <div class="cate-group main-cate-icon" data-cate="am-thuc">
+                                <div class="fa fa-cutlery fa-3x"></div>
+                                <div class="cate-name">Ẩm thực - Thực phẩm</div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="rows hidden" id="home_cate_paging2">
+                    <div class="col-md-12">
+                        <ol class="breadcrumb">
+                            <li id="view_cate">Loading...</li>
+                            <li id="view_subcate" class="active">Tất cả mục phụ</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="cate-subs">
+                </div>
+                <div class="rows">
+                    <div class="rvn-items col-md-12">
+                        <form method="post" name="frmLocationsFilter" id="frmLocationsFilter">
+                            <div id="locFilterDiv" class="visible-xs"><select id='locFilter' name='locFilter'
+                                    class='chosen-select form-control'>
+                                    <option value='0'>Toàn quốc</option>
+                                    <option value='1'>Hà Nội</option>'<option value='11'>Hồ Chí Minh</option>'<option
+                                        value='250'>Bình Dương</option>'<option value='53'>Hải Phòng</option>'<option
+                                        value='2'>Huế</option>'<option value='210'>Cần Thơ</option>'<option value='4'>Đà
+                                        Nẵng</option>'<option value='14'>Khánh Hòa</option>'<option value='195'>An Giang
+                                    </option>'<option value='233'>Bình Phước</option>'<option value='238'>Bình Định
+                                    </option>
+                                </select></div>
+                            <input type="hidden" name="scatid" value="0" />
+                        </form>
+                        <div class="clearfix"><a id="LcAnchor" name=""></a></div>
+                        <div class="clearfix">
+                            <p>&nbsp;</p>
+                        </div>
+                        <div class="latest-items clearfix"><i class="fa fa-stack-overflow fa-fw"></i> Tin rao vặt mới
+                        </div>
+
+                        <div id="LISTITEMS">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="rows ftr-4cols hidden-xs clearfix">
+                    <div class="col-md-3 col-sm-4">
+                        <div class="ftr-title">Liên hệ Raovat24h</div>
+
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                        <div class="ftr-title">Thông tin Raovat24h</div>
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                        <div class="ftr-title">Hướng dẫn</div>
+                    </div>
+                    <div class="col-md-3 hidden-sm">
+                        <div class="ftr-title">Liên kết ưu tiên</div>
+                    </div>
+                </div>
+                <div class="rows hidden-xs clearfix">
+                    <div class="col-md-3 col-sm-4">
+                        <div class="ftr-content">
+                              Địa chỉ: 126 Nguyễn Thiện Thành, Phường 5, Trà Vinh<br>ĐT:&nbsp;0817166927
+                        (Zalo)<br>Email: <a href="vonhi5389@gmail.com" class="" classname="" target="_blank"
+                            name="">vonhi5389@gmail.com</a>
+                            <div class="fb-icon"><a target="_blank" href="https://www.facebook.com/raovat2000/"><i
+                                        class="fa fa-facebook-official fa-2x"></i></a> <span class="dev-icon"><a
+                                        title="fullstack developer" href="https://globalvietnam.com" target="_blank"><i
+                                            class="fa fa-code fa-2x"></i></a> </span></div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                        <div class="ftr-content">
+                            <div><a href="/help?p=tin-tuc"><i class="fa fa-caret-right fa-fw"></i> Tin tức</a></div>
+                            <div><a href="/help?p=quy-che"><i class="fa fa-caret-right fa-fw"></i> Quy chế hoạt động</a>
+                            </div>
+                            <div><a href="/help?p=dieu-khoan"><i class="fa fa-caret-right fa-fw"></i> Điều khoản sử
+                                    dụng</a>
+                            </div>
+                            <div><a href="#?subj=1/Bang-gia-dich-vu.html"><i class="fa fa-caret-right fa-fw"></i>
+                                    Bảng giá</a></div>
+                            <div><a href="/help?p=lien-he"><i class="fa fa-caret-right fa-fw"></i> Liên hệ</a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                        <div class="ftr-content">
+                            <div><a href="#?subj=27#-dang-ky-thanh-vien.html" class="" classname="" target=""
+                                    name="">Hướng dẫn đăng ký thành viên</a></div>
+                            <div><a href="#?subj=28#-dang-tin.html" class="" classname="" target="" name=""><i
+                                        class="fa fa-caret-right fa-fw"></i> Hướng dẫn đăng tin</a></div>
+                            <div><a href="#?subj=10#-thanh-toan-.html" class="" classname="" target="" name=""><i
+                                        class="fa fa-caret-right fa-fw"></i> Hướng dẫn thanh toán</a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 hidden-sm">
+                        <div class="ftr-content">
+                            <span class="lnk-tags"><a href="https://sgc.vn/dich-vu-ma-qr-code-dong/"
+                                    title="thiết kế web, SEO" target="_blank">SGC, thiết kế QR code</a></span>, <span
+                                class="lnk-tags"><a href="https://ngoctraihoanggia.com/" title="ngoc trai that"
+                                    target="_blank">ngoc trai that</a></span>, <span class="lnk-tags"><a
+                                    href="https://ngoctraihoanggia.com/" title="giá ngọc trai" target="_blank">giá ngọc
+                                    trai</a></span>, <span class="lnk-tags"><a
+                                    href="http://laptopkimcuong.com/thu-mua-laptop-cu-gia-cao"
+                                    title="thu mua laptop cũ giá cao" target="_blank">thu mua laptop cũ giá
+                                    cao</a></span>,
+                            <span class="lnk-tags"><a
+                                    href="https://laptopkimcuong.com/thu-mua-laptop-gaming-cu-gia-cao-tphcm"
+                                    title="thu mua gaming cũ giá cao" target="_blank">thu mua gaming cũ giá
+                                    cao</a></span>,
+                            <span class="lnk-tags"><a href="https://ngoctraihoanggia.com/" title="Ngọc Trai"
+                                    target="_blank">Ngọc Trai</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ftr">
+                    <div class="ftrSigns hidden-xs">
+                        <div class="badge"><a href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=27313"><span
+                                    class="fa fa-check-circle"> ĐÃ ĐĂNG KÝ</span><br />Bộ Công Thương</a></div>
+                    </div>
+                    <div class="ftrCopyright">
+                        <div class="CopyrightText">Rao vặt 24h © 2025
+                        Đăng tin nhanh miễn phí, tin bất động sản, mua bán nhà đất, việc làm, tuyển dụng, tuyển sinh, dịch vụ, quảng cáo,điện thoại, laptop, điện máy, xe máy, ô tô, chợ đồ cũ giá rẻ...
+Rao vặt 24h chỉ chuyển tải thông tin. Không chịu bất kỳ trách nhiệm nào từ các tin này. </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const avatar = document.getElementById("usrAvt");
+                const box = document.getElementById("usrAvtText");
+
+                avatar.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    box.style.display =
+                        box.style.display === "block" ? "none" : "block";
+                });
+
+                document.addEventListener("click", function () {
+                    box.style.display = "none";
+                });
+            });
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const isLogin =
+                    localStorage.getItem("isLogin") === "true" ||
+                    sessionStorage.getItem("isLogin") === "true";
+
+                const user =
+                    JSON.parse(localStorage.getItem("currentUser")) ||
+                    JSON.parse(sessionStorage.getItem("currentUser"));
+
+                const userBox = document.getElementById("userLoggedBox");
+                const loginMenu = document.getElementById("loginMenu");
+                const postAdBtn = document.getElementById("postAdBtn");
+
+                if (isLogin && user) {
+                    if (userBox) userBox.style.display = "block";
+                    if (postAdBtn) postAdBtn.style.display = "block";
+                    if (loginMenu) loginMenu.style.display = "none";
+
+                    const nameEl = document.querySelector(".usr-name");
+                    const emailEl = document.querySelector(".user-email");
+
+                    if (nameEl) nameEl.innerHTML = `<i class='fa fa-info-circle fa-fw'></i> ${user.username}`;
+                    if (emailEl) emailEl.innerHTML = `<i class='fa fa-envelope fa-fw'></i> ${user.email}`;
+
+                } else {
+                    if (userBox) userBox.style.display = "none";
+                    if (postAdBtn) postAdBtn.style.display = "none";
+                    if (loginMenu) loginMenu.style.display = "block";
+                }
+            });
+        </script>
+
+        <script>
+            function logout() {
+                if (!confirm("Bạn có chắc muốn đăng xuất?")) return;
+
+                localStorage.removeItem("isLogin");
+                localStorage.removeItem("currentUser");
+                sessionStorage.clear();
+
+                window.location.href = "login.html";
+            }
+        </script>
+
+
+        <script>
+            const DATA_TIN = [
+                // Nhà đất (5)
+                { id: 1, title: "MT Ngang 6m đường 3/2 Q10", cate: "nha-dat", img: "images/tin.jpg", time: "2p trước", views: 1, status: "approved" },
+                { id: 2, title: "Nhà HXH Lý Thường Kiệt Q11", cate: "nha-dat", img: "images/tin.jpg", time: "5p trước", views: 5, status: "approved" },
+                { id: 3, title: "Bán đất thổ cư Bình Chánh", cate: "nha-dat", img: "images/tin.jpg", time: "10p trước", views: 8, status: "approved" },
+                { id: 4, title: "Cho thuê nhà nguyên căn Q3", cate: "nha-dat", img: "images/tin.jpg", time: "20p trước", views: 12, status: "approved" },
+                { id: 5, title: "Căn hộ mini full nội thất", cate: "nha-dat", img: "images/tin.jpg", time: "1h trước", views: 20, status: "approved" },
+
+                // Việc làm (4)
+                { id: 6, title: "Tuyển nhân viên bán hàng", cate: "viec-lam", img: "images/tin.jpg", time: "15p trước", views: 3, status: "approved" },
+                { id: 7, title: "Cần thợ phụ cơ khí", cate: "viec-lam", img: "images/tin.jpg", time: "30p trước", views: 6, status: "approved" },
+                { id: 8, title: "Tuyển kế toán nội bộ", cate: "viec-lam", img: "images/tin.jpg", time: "1h trước", views: 9, status: "approved" },
+                { id: 9, title: "Tuyển sinh khóa học SPA", cate: "viec-lam", img: "images/tin.jpg", time: "2h trước", views: 11, status: "approved" },
+
+                // Cơ khí (3)
+                { id: 10, title: "Bán máy tiện CNC", cate: "co-khi", img: "images/tin.jpg", time: "1h trước", views: 8, status: "approved" },
+                { id: 11, title: "Gia công chi tiết cơ khí", cate: "co-khi", img: "images/tin.jpg", time: "2h trước", views: 10, status: "approved" },
+                { id: 12, title: "Thanh lý máy hàn MIG", cate: "co-khi", img: "images/tin.jpg", time: "3h trước", views: 7, status: "approved" },
+
+                // Điện tử (4)
+                { id: 13, title: "Smart TV Samsung 55 inch", cate: "dien-tu", img: "images/tin.jpg", time: "30p trước", views: 12, status: "approved" },
+                { id: 14, title: "Máy giặt LG Inverter", cate: "dien-tu", img: "images/tin.jpg", time: "1h trước", views: 15, status: "approved" },
+                { id: 15, title: "Tủ lạnh Sharp mới 90%", cate: "dien-tu", img: "images/tin.jpg", time: "2h trước", views: 9, status: "approved" },
+                { id: 16, title: "Loa bluetooth JBL", cate: "dien-tu", img: "images/tin.jpg", time: "4h trước", views: 6, status: "approved" },
+
+                // Thời trang (3)
+                { id: 17, title: "Thanh lý áo khoác nam", cate: "thoi-trang", img: "images/tin.jpg", time: "20p trước", views: 4, status: "approved" },
+                { id: 18, title: "Đầm dự tiệc cao cấp", cate: "thoi-trang", img: "images/tin.jpg", time: "1h trước", views: 7, status: "approved" },
+                { id: 19, title: "Giày sneaker chính hãng", cate: "thoi-trang", img: "images/tin.jpg", time: "3h trước", views: 9, status: "approved" },
+
+                // Đời sống (3)
+                { id: 20, title: "Nhận giữ trẻ ban ngày", cate: "doi-song", img: "images/tin.jpg", time: "2h trước", views: 5, status: "approved" },
+                { id: 21, title: "Tìm người ở ghép Q7", cate: "doi-song", img: "images/tin.jpg", time: "4h trước", views: 11, status: "approved" },
+                { id: 22, title: "Cho nhận chăm sóc người già", cate: "doi-song", img: "images/tin.jpg", time: "6h trước", views: 8, status: "approved" },
+
+                // Ô tô - xe máy (4)
+                { id: 23, title: "Bán Toyota Vios 2019", cate: "oto-xemay", img: "images/tin.jpg", time: "1h trước", views: 22, status: "approved" },
+                { id: 24, title: "Honda SH 150i chính chủ", cate: "oto-xemay", img: "images/tin.jpg", time: "2h trước", views: 18, status: "approved" },
+                { id: 25, title: "Xe tải 1.5 tấn máy dầu", cate: "oto-xemay", img: "images/tin.jpg", time: "5h trước", views: 13, status: "approved" },
+                { id: 26, title: "Cần mua xe cũ giá rẻ", cate: "oto-xemay", img: "images/tin.jpg", time: "1 ngày trước", views: 6, status: "approved" },
+
+                // Máy tính (3)
+                { id: 27, title: "PC Gaming i5 RTX 3060", cate: "may-tinh", img: "images/tin.jpg", time: "2h trước", views: 14, status: "approved" },
+                { id: 28, title: "Laptop Dell XPS 13", cate: "may-tinh", img: "images/tin.jpg", time: "4h trước", views: 10, status: "approved" },
+                { id: 29, title: "Màn hình LG 27 inch", cate: "may-tinh", img: "images/tin.jpg", time: "6h trước", views: 9, status: "approved" },
+
+                // Dịch vụ (3)
+                { id: 30, title: "Nhận sửa điện nước tại nhà", cate: "dich-vu", img: "images/tin.jpg", time: "1h trước", views: 7, status: "approved" },
+                { id: 31, title: "Dịch vụ chuyển nhà trọn gói", cate: "dich-vu", img: "images/tin.jpg", time: "3h trước", views: 12, status: "approved" },
+                { id: 32, title: "Nhận thiết kế website", cate: "dich-vu", img: "images/tin.jpg", time: "1 ngày trước", views: 15, status: "approved" },
+
+                // Kinh doanh (3)
+                { id: 33, title: "Sang quán cafe mặt tiền", cate: "kinh-doanh", img: "images/tin.jpg", time: "2h trước", views: 20, status: "approved" },
+                { id: 34, title: "Tìm đối tác mở shop online", cate: "kinh-doanh", img: "images/tin.jpg", time: "5h trước", views: 9, status: "approved" },
+                { id: 35, title: "Nhượng quyền trà sữa", cate: "kinh-doanh", img: "images/tin.jpg", time: "1 ngày trước", views: 17, status: "approved" },
+
+                // Hàng hóa (3)
+                { id: 36, title: "Bán sắt thép xây dựng", cate: "hang-hoa", img: "images/tin.jpg", time: "3h trước", views: 11, status: "approved" },
+                { id: 37, title: "Cung cấp xi măng giá sỉ", cate: "hang-hoa", img: "images/tin.jpg", time: "6h trước", views: 8, status: "approved" },
+                { id: 38, title: "Thanh lý pallet gỗ", cate: "hang-hoa", img: "images/tin.jpg", time: "1 ngày trước", views: 6, status: "approved" },
+
+                // CNTT (3)
+                { id: 39, title: "Tuyển lập trình viên ReactJS", cate: "cntt", img: "images/tin.jpg", time: "2h trước", views: 16, status: "approved" },
+                { id: 40, title: "Nhận code app mobile", cate: "cntt", img: "images/tin.jpg", time: "5h trước", views: 12, status: "approved" },
+                { id: 41, title: "Bán source website TMĐT", cate: "cntt", img: "images/tin.jpg", time: "1 ngày trước", views: 14, status: "approved" },
+
+                // Điện thoại (3)
+                { id: 42, title: "iPhone 14 Pro Max 99%", cate: "dien-thoai", img: "images/tin.jpg", time: "30p trước", views: 12, status: "approved" },
+                { id: 43, title: "Samsung S23 Ultra", cate: "dien-thoai", img: "images/tin.jpg", time: "2h trước", views: 10, status: "approved" },
+                { id: 44, title: "Phụ kiện sạc nhanh 65W", cate: "dien-thoai", img: "images/tin.jpg", time: "5h trước", views: 7, status: "approved" },
+
+                // Mỹ thuật (2)
+                { id: 45, title: "Nhận vẽ tranh chân dung", cate: "my-thuat", img: "images/tin.jpg", time: "1 ngày trước", views: 9, status: "approved" },
+                { id: 46, title: "Thiết kế logo thương hiệu", cate: "my-thuat", img: "images/tin.jpg", time: "2 ngày trước", views: 13, status: "approved" },
+
+                // Ẩm thực (4)
+                { id: 47, title: "Bán bánh mì que Đà Nẵng", cate: "am-thuc", img: "images/tin.jpg", time: "1h trước", views: 6, status: "approved" },
+                { id: 48, title: "Nhận nấu tiệc tại nhà", cate: "am-thuc", img: "images/tin.jpg", time: "4h trước", views: 11, status: "approved" },
+                { id: 49, title: "Đặc sản khô cá lóc", cate: "am-thuc", img: "images/tin.jpg", time: "1 ngày trước", views: 8, status: "approved" },
+                { id: 50, title: "Cung cấp suất ăn công nghiệp", cate: "am-thuc", img: "images/tin.jpg", time: "2 ngày trước", views: 15, status: "approved" }
+            ];
+        </script>
+
+        <script>
+            const STORAGE_POSTS_KEY = "ALL_POSTS";
+
+            let allPosts = JSON.parse(localStorage.getItem(STORAGE_POSTS_KEY)) || [];
+
+            if (allPosts.length === 0) {
+                localStorage.setItem(STORAGE_POSTS_KEY, JSON.stringify(DATA_TIN));
+                console.log("✅ Đã init DATA_TIN vào localStorage");
+            } else {
+                console.log("ℹ️ LocalStorage đã có dữ liệu, không init lại");
+            }
+        </script>
+
+
+        <script>
+            const listContainer = document.getElementById("LISTITEMS");
+
+            function renderTin(list) {
+                listContainer.innerHTML = "";
+
+                if (list.length === 0) {
+                    listContainer.innerHTML = "<p>Không có tin đăng nào</p>";
+                    return;
+                }
+
+                list.forEach(item => {
+                    listContainer.innerHTML += `
+        <div class="listItem clearfix">
+            <a href="detail.html?id=${item.id}">
+                <div class="rounded-bo clearfix">
+                    <div class="rvn-item-image text-center">
+                        <img src="${item.img}" class="img-rounded"/>
+                    </div>
+                    <div class="rvn-item-content">
+                        <div class="rvn-item-title">${item.title}</div>
+                        <div class="rvn-item-date">
+                            <i class="fa fa-clock-o"></i> ${item.time}
+                            <span class="rvn-item-views">
+                                <i class="fa fa-eye"></i> ${item.views}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        `;
+                });
+            }
+
+            renderTin(allPosts);
+        </script>
+
+
+        <script>
+            document.querySelectorAll(".cate-group").forEach(cate => {
+                cate.addEventListener("click", () => {
+                    const cateKey = cate.getAttribute("data-cate");
+
+                    const filtered = allPosts.filter(item => item.cate === cateKey);
+                    renderTin(filtered);
+
+                    document.querySelectorAll(".cate-group").forEach(c => c.classList.remove("active"));
+                    cate.classList.add("active");
+                });
+            });
+        </script>
+</body>
+
+</html>

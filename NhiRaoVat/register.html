@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Đăng nhập vào hệ thống rao vặt">
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" href="/favicon.ico">
+    <title>Rao vặt - Đăng nhập hệ thống rao vặt</title>
+    <script type="text/javascript" src="https://fb02e1218898fb02e129e73.zapwp.com/generate_js:true"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <div id="prloading"><span class="ld-text"><img src="/images/connecting.gif" width="48"
+                            border="0"></span></div>
+                <div class="notification-nav visible-xs">
+                    <div class="notification notification-button pull-right"><a tabindex="0" role="button"
+                            data-toggle="popover" data-trigger="focus" data-placement="bottom"><i
+                                class="fa fa-bell fa-fw bottom"></i><span class="count notificount"
+                                style="display: none"></span></a></div>
+                </div>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand reload" href="index.html"><img src="images/logo.jpg" width="165"
+                        border="0" /></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav navbar-right bar-top">
+                    <li class="lf-postad visible-md visible-lg" id="postAdBtn"><a href="dangtin.html"><i
+                                class="fa fa-commenting fa-fw" aria-hidden="true"></i> Đăng tin <span
+                                class="hidden-xs">miễn phí</span></a></li>
+                    <li class="visible-xs"><a href="timkiem.html"><i class="fa fa-search fa-fw" aria-hidden="true"></i>
+                            Tìm
+                            kiếm</a></li>
+
+
+                    <li class="hidden-xs" id="userLoggedBox">
+                        <div class="pull-right avatar">
+                            <div class='avatar-img32' id='usrAvt'><a tabindex="0" data-placement="bottom" role="button"
+                                    data-toggle="popover" data-trigger="focus">
+                                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR99-ZMZeEtYlFVdT-HN3Hz0f_i64Zf76D67g&s'
+                                        alt='avatar' /></a></div>
+                            <div class='usrAvtBox' id='usrAvtText' style="display:none">
+                                <div class='avatar-text'>
+                                    <div class='usr-name'><i class='fa fa-info-circle fa-fw'></i> Kieu Nhi</div>
+                                </div>
+                                <div class='avatar-text'>
+                                    <div class='user-email'><i class='fa fa-envelope fa-fw'></i> vonhi@gmail.com
+                                    </div>
+                                </div>
+                                <div class='avatar-text'>
+                                    <div class='avt-link'><a href='quanly.html'><i class='fa fa-wpforms fa-fw'></i> Bản
+                                            tin
+                                            đã đăng <span class='n-posts'>0</span></a></div>
+                                </div>
+                                <div class='avatar-text'>
+                                    <div class='user-info'><a href='#'><i class='fa fa-user-circle-o fa-fw'></i> Chỉnh
+                                            sửa thông tin</a></div>
+                                </div>
+
+                                <div class='avatar-text'>
+                                    <div class='user-info'>
+                                        <a href="#" onclick="logout()">
+                                            <i class='fa fa-sign-out fa-fw'></i> Đăng xuất
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class='avatar-last-login'><i class='fa fa-history fa-fw'></i> <span
+                                        class='small'>Đăng nhập gần đây 12:24 - 20/11/2025</span></div>
+                                <div class='clearfix'></div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right bar-bellow" id="loginMenu">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false"><i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i> Đăng
+                            nhập<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="dangtin.html"><i class="fa fa-commenting fa-fw rvn-blue"></i> Đăng tin rao
+                                    vặt</a>
+                            </li>
+                            <li><a href="quanly.html"><i class="fa fa-wpforms fa-fw"></i> Chỉnh sửa, nâng cấp bản
+                                    tin</a>
+                            </li>
+                            <li><a href="login.html"><i class="fa fa-user fa-fw"></i> Thông tin tài khoản</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <span id="top-link-block" class="hidden">
+        <a href="#top" onclick="$('html,body').animate({scrollTop:0},'slow');return false;"></a>
+    </span>
+
+    <!-- child of the body tag -->
+    <div id="pgContent" class="clearfix">
+        <div class="rvn-menu-bar hidden-xs">
+            <form id="frmSearchBar" action="timkiem.html" method="get">
+                <div class="container">
+                    <div class="rvn-menu-city" id="loca_select">
+                        <select id='search_place' name='search_place' class='chosen-select form-control'>
+                            <option value='0'>Toàn quốc</option>
+                            <option value='1'>Hà Nội</option>'<option value='11'>Hồ Chí Minh</option>'<option
+                                value='250'>Bình Dương</option>'<option value='53'>Hải Phòng</option>'<option value='2'>
+                                Huế</option>'<option value='210'>Cần Thơ</option>'<option value='4'>Đà Nẵng</option>'
+                            <option value='14'>Khánh Hòa</option>'<option value='195'>An Giang</option>'<option
+                                value='233'>Bình Phước</option>'<option value='238'>Bình Định</option>'<option
+                                value='9'>Bình Thuận</option>'<option value='228'>Bạc Liêu</option>'<option value='6'>
+                                Phú Yên</option>'<option value='268'>Bắc Giang</option>'<option value='260'>Bắc Ninh
+                            </option>'<option value='254'>Bến Tre</option>'<option value='269'>Bắc Kạn</option>'<option
+                                value='523'>Cao Bằng</option>'<option value='192'>Cà Mau</option>'<option value='181'>
+                                Đắk Lắk</option>'<option value='784'>Đắk Nông</option>'<option value='216'>Đồng Nai
+                            </option>'<option value='71'>Đồng Tháp</option>'<option value='792'>Điện Biên</option>'
+                            <option value='72'>Gia Lai</option>'<option value='77'>Hà Giang</option>'<option
+                                value='109'>Hà Nam</option>'<option value='98'>Hà Tĩnh</option>'<option value='92'>Hải
+                                Dương</option>'<option value='540'>Hậu Giang</option>'<option value='130'>Hoà Bình
+                            </option>'<option value='277'>Vũng Tàu</option>'<option value='141'>Hưng Yên</option>'
+                            <option value='154'>Kiên Giang</option>'<option value='689'>Kon Tum</option>'<option
+                                value='175'>Lai Châu</option>'<option value='162'>Lào Cai</option>'<option value='285'>
+                                Lâm Đồng</option>'<option value='59'>Lạng Sơn</option>'<option value='294'>Long An
+                            </option>'<option value='380'>Nam Định</option>'<option value='511'>Nghệ An</option>'<option
+                                value='520'>Ninh Bình</option>'<option value='392'>Ninh Thuận</option>'<option
+                                value='396'>Phú Thọ</option>'<option value='416'>Quảng Bình</option>'<option
+                                value='424'>Quảng Nam</option>'<option value='438'>Quảng Ngãi</option>'<option
+                                value='451'>Quảng Ninh</option>'<option value='465'>Quảng Trị</option>'<option
+                                value='514'>Sóc Trăng</option>'<option value='501'>Sơn La</option>'<option value='495'>
+                                Tây Ninh</option>'<option value='348'>Thanh Hoá</option>'<option value='485'>Thái Bình
+                            </option>'<option value='474'>Thái Nguyên</option>'<option value='341'>Tiền Giang</option>'
+                            <option value='332'>Trà Vinh</option>'<option value='314'>Tuyên Quang</option>'<option
+                                value='321'>Vĩnh Long</option>'<option value='186'>Vĩnh Phúc</option>'<option
+                                value='323'>Yên Bái</option>'<option value='903'>Các tỉnh khác</option>'
+                        </select>
+                    </div>
+
+                    <div class="rvn-menu-cate">
+                        <select id='home_category' name='search_kat' class='chosen-select form-control'>
+                            <option value='0' add-data-content="<i class='fa fa-list fa-fw' aria-hidden='true'></i> ">
+                                Tất cả danh mục</option>
+                            <option value='11' add-data-content="<i class='fa fa-home fa-fw' aria-hidden='true'></i> ">
+                                Bất động sản</option>
+                            <option value='75' add-data-content="<i class='fa fa-users fa-fw' aria-hidden='true'></i> ">
+                                Việc làm - Tuyển sinh</option>
+                            <option value='73' add-data-content="<i class='fa fa-cogs fa-fw' aria-hidden='true'></i> ">
+                                Cơ khí - Máy móc</option>
+                            <option value='2'
+                                add-data-content="<i class='fa fa-television fa-fw' aria-hidden='true'></i> ">Điện máy -
+                                Điện tử</option>
+                            <option value='77'
+                                add-data-content="<i class='fa fa-shopping-bag fa-fw' aria-hidden='true'></i> ">Thời
+                                trang - Làm đẹp</option>
+                            <option value='78'
+                                add-data-content="<i class='fa fa-smile-o fa-fw' aria-hidden='true'></i> ">Đời sống - Xã
+                                hội</option>
+                            <option value='76' add-data-content="<i class='fa fa-car fa-fw' aria-hidden='true'></i> ">Ô
+                                tô - Xe máy</option>
+                            <option value='10'
+                                add-data-content="<i class='fa fa-laptop fa-fw' aria-hidden='true'></i> ">Máy tính -
+                                Linh kiện</option>
+                            <option value='9'
+                                add-data-content="<i class='fa fa-whatsapp fa-fw' aria-hidden='true'></i> ">Dịch vụ
+                            </option>
+                            <option value='74'
+                                add-data-content="<i class='fa fa-balance-scale fa-fw' aria-hidden='true'></i> ">Kinh
+                                doanh</option>
+                            <option value='82' add-data-content="<i class='fa fa-tags fa-fw' aria-hidden='true'></i> ">
+                                Hàng hóa - Vật liệu</option>
+                            <option value='98' add-data-content="<i class='fa fa-globe fa-fw' aria-hidden='true'></i> ">
+                                Công nghệ thông tin</option>
+                            <option value='3' add-data-content="<i class='fa fa-mobile fa-fw' aria-hidden='true'></i> ">
+                                Điện thoại - Phụ kiện</option>
+                            <option value='84'
+                                add-data-content="<i class='fa fa-paint-brush fa-fw' aria-hidden='true'></i> ">Mỹ thuật
+                                - Thiết kế</option>
+                            <option value='1'
+                                add-data-content="<i class='fa fa-cutlery fa-fw' aria-hidden='true'></i> ">Ẩm thực -
+                                Thực phẩm</option>
+                        </select>
+                    </div>
+
+                    <div class="rvn-menu-search">
+                        <div class="input-group">
+                            <input type="text" name="kw" class="form-control" placeholder="Nhập thông tin cần tìm...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit">Tìm kiếm!</button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </div><!-- /.rvn-menu-search -->
+                </div>
+            </form>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="container pgBody">
+            <div class="rows">
+                <div class="col-sm-12">
+                    <div class="pg-login-plugin col-sm-6">
+                        <div>
+                            <div class="collapse in">
+                                <div class="alert alert-warning alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                    <strong>Tạo tài khoản mới.</strong><br>Bạn sẽ nhận được email từ Raovat24h để kích
+                                    hoạt tài khoản. Vui lòng kiểm tra Email mà bạn đăng ký để kích hoạt trước khi sử
+                                    dụng!
+                                </div>
+                                <form id="frmReg" class="form-horizontal" method="post">
+                                    <div class="form-group">
+                                        <label for="inputName1" class="col-sm-4 control-label"><i
+                                                class="fa fa-user-circle fa-fw"></i> Tên liên hệ </label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="inputName1" value=""
+                                                name="username" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-4 control-label"><i
+                                                class="fa fa-envelope-o fa-fw"></i> Email</label>
+                                        <div class="col-sm-8">
+                                            <input type="email" id="inputEmail3" class="form-control" value=""
+                                                name="useremail" placeholder="Email" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password1" class="col-sm-4 control-label"><i
+                                                class="fa fa-key fa-fw"></i> Mật khẩu</label>
+                                        <div class="col-sm-8">
+                                            <input type="password" id="password1" class="form-control" name="password1"
+                                                value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password2" class="col-sm-4 control-label"><i
+                                                class="fa fa-arrow-up fa-fw"></i> Nhập lại</label>
+                                        <div class="col-sm-8">
+                                            <input type="password" id="password2" class="form-control" name="password2">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPhone1" class="col-sm-4 control-label"><i
+                                                class="fa fa-phone fa-fw"></i> Điện thoại</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" id="inputPhone1" class="form-control" name="userphone"
+                                                placeholder="Số điện thoại" value="">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-4 col-sm-8">
+                                            <button id="buttonReg" type="submit" class="btn btn-primary" name="regsm"
+                                                value="Đăng ký"><i class="fa fa-user-plus fa-fw"></i> Đăng ký</button>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="vcode" id="vcode" />
+                                    <input type="hidden" name="action" value="submitReg">
+                                    <input type="hidden" name="token" id="recaptcha_token">
+                                </form>
+                                <script>
+                                    document.getElementById("frmReg").addEventListener("submit", function (e) {
+                                        e.preventDefault();
+
+                                        const username = document.getElementById("inputName1").value.trim();
+                                        const email = document.getElementById("inputEmail3").value.trim();
+                                        const pass1 = document.getElementById("password1").value.trim();
+                                        const pass2 = document.getElementById("password2").value.trim();
+                                        const phone = document.getElementById("inputPhone1").value.trim();
+
+                                        if (!username || !email || !pass1 || !pass2) {
+                                            alert("Vui lòng nhập đầy đủ thông tin!");
+                                            return;
+                                        }
+
+                                        if (pass1 !== pass2) {
+                                            alert("Mật khẩu và Nhập lại mật khẩu không trùng khớp!");
+                                            return;
+                                        }
+
+                                        let users = JSON.parse(localStorage.getItem("users")) || [];
+
+                                        const isExist = users.some(u => u.email === email);
+                                        if (isExist) {
+                                            alert("Email đã được đăng ký!");
+                                            return;
+                                        }
+
+                                        const newUser = {
+                                            id: Date.now(),          
+                                            username,
+                                            email,
+                                            password: pass1,
+                                            phone,
+                                            role: "user",             
+                                            status: "pending",      
+                                            createdAt: new Date().toISOString()
+                                        };
+
+                                        users.push(newUser);
+
+                                        localStorage.setItem("users", JSON.stringify(users));
+
+                                        alert("Đăng ký thành công!");
+
+                                        window.location.href = "login.html";
+                                    });
+                                </script>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <p></p>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="rows ftr-4cols hidden-xs clearfix">
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-title">Liên hệ Raovat24h</div>
+
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-title">Thông tin Raovat24h</div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-title">Hướng dẫn</div>
+                </div>
+                <div class="col-md-3 hidden-sm">
+                    <div class="ftr-title">Liên kết ưu tiên</div>
+                </div>
+            </div>
+            <div class="rows hidden-xs clearfix">
+                <div class="col-md-3 col-sm-4">
+
+                    <div class="ftr-content">
+                        Địa chỉ: 126 Nguyễn Thiện Thành, Phường 5, Trà Vinh<br>ĐT:&nbsp;0817166927
+                        (Zalo)<br>Email: <a href="vonhi5389@gmail.com" class="" classname="" target="_blank"
+                            name="">vonhi5389@gmail.com</a>
+                        <div class="fb-icon"><a target="_blank" href="https://www.facebook.com/raovat2000/"><i
+                                    class="fa fa-facebook-official fa-2x"></i></a> <span class="dev-icon"><a
+                                    title="fullstack developer" href="https://globalvietnam.com" target="_blank"><i
+                                        class="fa fa-code fa-2x"></i></a> </span></div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-content">
+                        <div><a href="/help?p=tin-tuc"><i class="fa fa-caret-right fa-fw"></i> Tin tức</a></div>
+                        <div><a href="/help?p=quy-che"><i class="fa fa-caret-right fa-fw"></i> Quy chế hoạt động</a>
+                        </div>
+                        <div><a href="/help?p=dieu-khoan"><i class="fa fa-caret-right fa-fw"></i> Điều khoản sử dụng</a>
+                        </div>
+                        <div><a href="#?subj=1/Bang-gia-dich-vu.html"><i class="fa fa-caret-right fa-fw"></i>
+                                Bảng giá</a></div>
+                        <div><a href="/help?p=lien-he"><i class="fa fa-caret-right fa-fw"></i> Liên hệ</a></div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-content">
+                        <div><a href="#?subj=27#-dang-ky-thanh-vien.html" class="" classname="" target="" name="">Hướng
+                                dẫn đăng ký thành viên</a></div>
+                        <div><a href="#?subj=28#-dang-tin.html" class="" classname="" target="" name=""><i
+                                    class="fa fa-caret-right fa-fw"></i> Hướng dẫn đăng tin</a></div>
+                        <div><a href="#?subj=10#-thanh-toan-.html" class="" classname="" target="" name=""><i
+                                    class="fa fa-caret-right fa-fw"></i> Hướng dẫn thanh toán</a></div>
+                    </div>
+                </div>
+                <div class="col-md-3 hidden-sm">
+                    <div class="ftr-content">
+
+                    </div>
+                </div>
+            </div>
+            <div class="ftr">
+                <div class="ftrSigns hidden-xs">
+                    <div class="badge"><a href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=27313"><span
+                                class="fa fa-check-circle"> ĐÃ ĐĂNG KÝ</span><br />Bộ Công Thương</a></div>
+                </div>
+                <div class="ftrCopyright">
+                      <div class="CopyrightText">Rao vặt 24h © 2025
+                        Đăng tin nhanh miễn phí, tin bất động sản, mua bán nhà đất, việc làm, tuyển dụng, tuyển sinh, dịch vụ, quảng cáo,điện thoại, laptop, điện máy, xe máy, ô tô, chợ đồ cũ giá rẻ...
+Rao vặt 24h chỉ chuyển tải thông tin. Không chịu bất kỳ trách nhiệm nào từ các tin này. </div>
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const avatar = document.getElementById("usrAvt");
+            const box = document.getElementById("usrAvtText");
+
+            avatar.addEventListener("click", function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                box.style.display =
+                    box.style.display === "block" ? "none" : "block";
+            });
+
+            document.addEventListener("click", function () {
+                box.style.display = "none";
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const isLogin =
+                localStorage.getItem("isLogin") === "true" ||
+                sessionStorage.getItem("isLogin") === "true";
+
+            const user =
+                JSON.parse(localStorage.getItem("currentUser")) ||
+                JSON.parse(sessionStorage.getItem("currentUser"));
+
+            const userBox = document.getElementById("userLoggedBox");
+            const loginMenu = document.getElementById("loginMenu");
+            const postAdBtn = document.getElementById("postAdBtn");
+
+            if (isLogin && user) {
+                if (userBox) userBox.style.display = "block";
+                if (postAdBtn) postAdBtn.style.display = "block";
+                if (loginMenu) loginMenu.style.display = "none";
+
+                const nameEl = document.querySelector(".usr-name");
+                const emailEl = document.querySelector(".user-email");
+
+                if (nameEl) nameEl.innerHTML = `<i class='fa fa-info-circle fa-fw'></i> ${user.username}`;
+                if (emailEl) emailEl.innerHTML = `<i class='fa fa-envelope fa-fw'></i> ${user.email}`;
+
+            } else {
+                if (userBox) userBox.style.display = "none";
+                if (postAdBtn) postAdBtn.style.display = "none";
+                if (loginMenu) loginMenu.style.display = "block";
+            }
+        });
+    </script>
+
+    <script>
+        function logout() {
+            if (!confirm("Bạn có chắc muốn đăng xuất?")) return;
+
+            localStorage.removeItem("isLogin");
+            localStorage.removeItem("currentUser");
+            sessionStorage.clear();
+
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+
+</html>

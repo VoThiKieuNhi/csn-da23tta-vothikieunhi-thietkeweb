@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Language" content="vi" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name='viewport'
+        content='viewport-fit=cover, width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <title>Mạng rao vặt, mua bán, hàng mới về, đồ cổ, đồ cũ, đồ secondhand, Việt Nam - Mạng rao vặt, mua bán, hàng mới
+        về, đồ cũ, đồ secondhand, Việt Nam</title>
+    <script src="/callback_js/init.js?ver=2022.02.07.1" type="text/javascript"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tim.css">
+    <script type="text/javascript" src="https://fb02e1218898fb02e129e73.zapwp.com/generate_js:true"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+
+<body class="htmlContent">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <div id="prloading"><span class="ld-text"><img src="/images/connecting.gif" width="48"
+                            border="0"></span></div>
+                <div class="notification-nav visible-xs">
+                    <div class="notification notification-button pull-right"><a tabindex="0" role="button"
+                            data-toggle="popover" data-trigger="focus" data-placement="bottom"><i
+                                class="fa fa-bell fa-fw bottom"></i><span class="count notificount"
+                                style="display: none"></span></a></div>
+                </div>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand reload" href="index.html"><img src="images/logo.jpg" width="165"
+                        border="0" /></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav navbar-right bar-top">
+                    <li class="lf-postad visible-md visible-lg" id="postAdBtn"><a href="dangtin.html"><i
+                                class="fa fa-commenting fa-fw" aria-hidden="true"></i> Đăng tin <span
+                                class="hidden-xs">miễn phí</span></a></li>
+                    <li class="visible-xs"><a href="timkiem.html"><i class="fa fa-search fa-fw" aria-hidden="true"></i>
+                            Tìm
+                            kiếm</a></li>
+
+
+                    <li class="hidden-xs" id="userLoggedBox">
+                        <div class="pull-right avatar">
+                            <div class='avatar-img32' id='usrAvt'><a tabindex="0" data-placement="bottom" role="button"
+                                    data-toggle="popover" data-trigger="focus">
+                                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR99-ZMZeEtYlFVdT-HN3Hz0f_i64Zf76D67g&s'
+                                        alt='avatar' /></a></div>
+                            <div class='usrAvtBox' id='usrAvtText' style="display:none">
+                                <div class='avatar-text'>
+                                    <div class='usr-name'><i class='fa fa-info-circle fa-fw'></i> Kieu Nhi</div>
+                                </div>
+                                <div class='avatar-text'>
+                                    <div class='user-email'><i class='fa fa-envelope fa-fw'></i> vonhi@gmail.com
+                                    </div>
+                                </div>
+                                <div class='avatar-text'>
+                                    <div class='avt-link'><a href='quanly.html'><i class='fa fa-wpforms fa-fw'></i> Bản
+                                            tin
+                                            đã đăng <span class='n-posts'>0</span></a></div>
+                                </div>
+                                <div class='avatar-text'>
+                                    <div class='user-info'><a href='#'><i class='fa fa-user-circle-o fa-fw'></i> Chỉnh
+                                            sửa thông tin</a></div>
+                                </div>
+
+                                <div class='avatar-text'>
+                                    <div class='user-info'>
+                                        <a href="#" onclick="logout()">
+                                            <i class='fa fa-sign-out fa-fw'></i> Đăng xuất
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class='avatar-last-login'><i class='fa fa-history fa-fw'></i> <span
+                                        class='small'>Đăng nhập gần đây 12:24 - 20/11/2025</span></div>
+                                <div class='clearfix'></div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right bar-bellow" id="loginMenu">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false"><i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i> Đăng
+                            nhập<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="dangtin.html"><i class="fa fa-commenting fa-fw rvn-blue"></i> Đăng tin rao
+                                    vặt</a>
+                            </li>
+                            <li><a href="quanly.html"><i class="fa fa-wpforms fa-fw"></i> Chỉnh sửa, nâng cấp bản
+                                    tin</a>
+                            </li>
+                            <li><a href="login.html"><i class="fa fa-user fa-fw"></i> Thông tin tài khoản</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <span id="top-link-block" class="hidden">
+        <a href="#top" onclick="$('html,body').animate({scrollTop:0},'slow');return false;"></a>
+    </span>
+
+    <div id="pgContent" class="clearfix">
+        <div class="container pgBody">
+            <div class="dang-tin-body rows">
+                <div class="col-md-9">
+                    <div class="dang-tin">
+
+                        <div class="dang-tin-step clearfix">
+                            <div class="step1" style="width:35%"><i class="fa fa-list"></i> Danh mục</div>
+                            <div class="step2" style="width:35%"><i class="fa fa-eye"></i> Nội dung</div>
+                            <div class="step3" style="width:30%"><i class="fa fa-check"></i> Kiểm tra</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" style="width: 35%">
+                                <span class="sr-only">10% Complete (danger)</span>
+                            </div>
+                            <div class="progress-bar progress-bar-warning" style="width: 0%">
+                                <span class="sr-only">20% Complete (warning)</span>
+                            </div>
+                            <div class="progress-bar progress-bar-success" style="width: 0%">
+                                <span class="sr-only">35% Complete (success)</span>
+                            </div>
+                        </div>
+                        <div class="post-step1">
+                            <form id="frmStep1" action="step2.html" method="get">
+
+                                <div class="col-md-5 col-sm-5">
+                                    <div class="danh-muc">
+                                        <ul class='dang-tin-cate list-group'>
+                                            <div class='cate-hdr'><span class='badge'>1</span> Chọn chuyên mục đăng tin
+                                            </div>
+
+                                            <li id="category11" data-name="Nhà cửa - Đất đai" data-slug="nha-dat"
+                                                onclick="showSubCategory(11)">
+                                                <i class="fa fa-home fa-fw"></i> Bất động sản
+                                                <i class="float-right">...</i>
+                                            </li>
+
+                                            <li id="category75" data-name="Việc làm - Tuyển sinh" data-slug="viec-lam"
+                                                onclick="showSubCategory(75)">
+                                                <i class="fa fa-users fa-fw"></i> Việc làm - Tuyển sinh
+                                                <i class="float-right">...</i>
+                                            </li>
+
+                                            <li id="category73" data-name="Cơ khí - Máy móc" data-slug="co-khi"
+                                                onclick="showSubCategory(73)">
+                                                <i class="fa fa-cogs fa-fw"></i> Cơ khí - Máy móc
+                                                <i class="float-right">...</i>
+                                            </li>
+
+                                            <li id="category2" data-name="Điện máy - Điện tử" data-slug="dien-tu"
+                                                onclick="showSubCategory(2)">
+                                                <i class="fa fa-television fa-fw"></i> Điện máy - Điện tử
+                                                <i class="float-right">...</i>
+                                            </li>
+
+                                            <li id="category77" data-name="Thời trang - Làm đẹp" data-slug="thoi-trang"
+                                                onclick="showSubCategory(77)">
+                                                <i class="fa fa-shopping-bag fa-fw"></i> Thời trang - Làm đẹp
+                                                <i class="float-right">...</i>
+                                            </li>
+
+                                            <li id="category78" data-name="Đời sống - Xã hội" data-slug="doi-song"
+                                                onclick="showSubCategory(78)">
+                                                <i class="fa fa-smile-o fa-fw"></i> Đời sống - Xã hội
+                                                <i class="float-right">...</i>
+                                            </li>
+
+                                            <li id="category76" data-name="Ô tô - Xe máy" data-slug="oto-xemay"
+                                                onclick="showSubCategory(76)">
+                                                <i class="fa fa-car fa-fw"></i> Ô tô - Xe máy
+                                                <i class="float-right">...</i>
+                                            </li>
+
+                                            <li id="category10" data-name="Máy tính - Linh kiện" data-slug="may-tinh"
+                                                onclick="showSubCategory(10)">
+                                                <i class="fa fa-laptop fa-fw"></i> Máy tính - Linh kiện
+                                                <i class="float-right">...</i>
+                                            </li>
+
+                                            <li id="category9" data-name="Dịch vụ" data-slug="dich-vu"
+                                                onclick="showSubCategory(9)">
+                                                <i class="fa fa-whatsapp fa-fw"></i> Dịch vụ
+                                                <i class="float-right">...</i>
+                                            </li>
+
+                                            <li id="category74" data-name="Kinh doanh" data-slug="kinh-doanh"
+                                                onclick="showSubCategory(74)">
+                                                <i class="fa fa-balance-scale fa-fw"></i> Kinh doanh
+                                                <i class="float-right">...</i>
+                                            </li>
+
+                                            <li id="category82" data-name="Hàng hóa - Vật liệu" data-slug="hang-hoa"
+                                                onclick="showSubCategory(82)">
+                                                <i class="fa fa-tags fa-fw"></i> Hàng hóa - Vật liệu
+                                                <i class="float-right">...</i>
+                                            </li>
+
+                                            <li id="category98" data-name="Công nghệ thông tin" data-slug="cntt"
+                                                onclick="showSubCategory(98)">
+                                                <i class="fa fa-globe fa-fw"></i> Công nghệ thông tin
+                                                <i class="float-right">...</i>
+                                            </li>
+
+                                            <li id="category3" data-name="Điện thoại - Phụ kiện" data-slug="dien-thoai"
+                                                onclick="showSubCategory(3)">
+                                                <i class="fa fa-mobile fa-fw"></i> Điện thoại - Phụ kiện
+                                                <i class="float-right">...</i>
+                                            </li>
+
+                                            <li id="category84" data-name="Mỹ thuật - Thiết kế" data-slug="my-thuat"
+                                                onclick="showSubCategory(84)">
+                                                <i class="fa fa-paint-brush fa-fw"></i> Mỹ thuật - Thiết kế
+                                                <i class="float-right">...</i>
+                                            </li>
+
+                                            <li id="category1" data-name="Ẩm thực - Thực phẩm" data-slug="am-thuc"
+                                                onclick="showSubCategory(1)">
+                                                <i class="fa fa-cutlery fa-fw"></i> Ẩm thực - Thực phẩm
+                                                <i class="float-right">...</i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-sm-7">
+                                    <div id="loadSub"></div>
+                                    <div id="loadOptions"></div>
+                                    <div id="btnNextStep" style="padding:0 0 5px 5px;"><button type="submit"
+                                            class="btn btn-default btn-success hidden">Tiếp tục</button></div>
+                                </div>
+                                <input type="hidden" name="sitecatid" value="0" />
+                                <input type="hidden" name="subcatid" value="0" />
+                                <div id="add_coptions"></div>
+                            </form>
+
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function () {
+
+                                    let postData = JSON.parse(localStorage.getItem("postDraft")) || {
+                                        category: null,
+                                        subcategory: null,
+                                        options: {},
+                                        post: {},
+                                        contact: {}
+                                    };
+
+                                    window.showSubCategory = function (catId) {
+                                        const catEl = document.getElementById("category" + catId);
+                                        if (!catEl) {
+                                            console.error("❌ Không tìm thấy category", catId);
+                                            return;
+                                        }
+
+                                        postData.category = {
+                                            id: catId,
+                                            name: catEl.dataset.name,
+                                            slug: catEl.dataset.slug,
+                                        };
+
+                                        localStorage.setItem("postDraft", JSON.stringify(postData));
+                                        loadSubCategory(catId);
+                                        console.log("✅ Đã chọn category:", postData.category);
+                                    };
+
+
+                                    window.selectSub = function (id, name) {
+                                        postData.subcategory = { id, name };
+                                        localStorage.setItem("postDraft", JSON.stringify(postData));
+                                        document.querySelector("#btnNextStep button").classList.remove("hidden");
+                                        console.log("✅ Đã chọn sub:", postData.subcategory);
+                                    };
+
+                                    const frm = document.getElementById("frmStep1");
+                                    if (frm) {
+                                        frm.addEventListener("submit", () => {
+                                            localStorage.setItem("postDraft", JSON.stringify(postData));
+                                        });
+                                    }
+
+                                });
+                            </script>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                </div>
+            </div>
+
+        </div>
+        <div class="modal fade" id="send-resp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="form-inline">Thông báo!</div>
+                    </div>
+                    <div class="modal-body" id="modalTextResp">
+                        Đang xử lý thông tin!
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn btn-danger btn-ok" data-dismiss="modal">Ok</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="allow_notification" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-400">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="form-inline">Nhận thông báo liên hệ từ người dùng?</div>
+                    </div>
+                    <div class="modal-body text-center rvn-light-blue-bg">
+                        <img src="/images/allow.png" border="0" width="307" class="img-rounded">
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn btn-success btn-ok" data-dismiss="modal" id="btnNotification">Allow</a> <a
+                            class="btn btn-danger btn-cancel" id="btnCancelNotification" data-dismiss="modal">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="rows ftr-4cols hidden-xs clearfix">
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-title">Liên hệ Raovat24h</div>
+
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-title">Thông tin Raovat24h</div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-title">Hướng dẫn</div>
+                </div>
+                <div class="col-md-3 hidden-sm">
+                    <div class="ftr-title">Liên kết ưu tiên</div>
+                </div>
+            </div>
+            <div class="rows hidden-xs clearfix">
+                <div class="col-md-3 col-sm-4">
+
+                    <div class="ftr-content">
+                         Địa chỉ: 126 Nguyễn Thiện Thành, Phường 5, Trà Vinh<br>ĐT:&nbsp;0817166927
+                        (Zalo)<br>Email: <a href="vonhi5389@gmail.com" class="" classname="" target="_blank"
+                            name="">vonhi5389@gmail.com</a>
+                        <div class="fb-icon"><a target="_blank" href="https://www.facebook.com/raovat2000/"><i
+                                    class="fa fa-facebook-official fa-2x"></i></a> <span class="dev-icon"><a
+                                    title="fullstack developer" href="https://globalvietnam.com" target="_blank"><i
+                                        class="fa fa-code fa-2x"></i></a> </span></div>
+
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-content">
+                        <div><a href="/help?p=tin-tuc"><i class="fa fa-caret-right fa-fw"></i> Tin tức</a></div>
+                        <div><a href="/help?p=quy-che"><i class="fa fa-caret-right fa-fw"></i> Quy chế hoạt động</a>
+                        </div>
+                        <div><a href="/help?p=dieu-khoan"><i class="fa fa-caret-right fa-fw"></i> Điều khoản sử
+                                dụng</a>
+                        </div>
+                        <div><a href="#?subj=1/Bang-gia-dich-vu.html"><i class="fa fa-caret-right fa-fw"></i>
+                                Bảng giá</a></div>
+                        <div><a href="/help?p=lien-he"><i class="fa fa-caret-right fa-fw"></i> Liên hệ</a></div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-content">
+                        <div><a href="#?subj=27#-dang-ky-thanh-vien.html" class="" classname="" target="" name="">Hướng
+                                dẫn đăng ký thành viên</a></div>
+                        <div><a href="#?subj=28#-dang-tin.html" class="" classname="" target="" name=""><i
+                                    class="fa fa-caret-right fa-fw"></i> Hướng dẫn đăng tin</a></div>
+                        <div><a href="#?subj=10#-thanh-toan-.html" class="" classname="" target="" name=""><i
+                                    class="fa fa-caret-right fa-fw"></i> Hướng dẫn thanh toán</a></div>
+                    </div>
+                </div>
+                <div class="col-md-3 hidden-sm">
+                    <div class="ftr-content">
+                        <span class="lnk-tags"><a href="https://sgc.vn/dich-vu-ma-qr-code-dong/"
+                                title="thiết kế web, SEO" target="_blank">SGC, thiết kế QR code</a></span>, <span
+                            class="lnk-tags"><a href="https://ngoctraihoanggia.com/" title="ngoc trai that"
+                                target="_blank">ngoc trai that</a></span>, <span class="lnk-tags"><a
+                                href="https://ngoctraihoanggia.com/" title="giá ngọc trai" target="_blank">giá ngọc
+                                trai</a></span>, <span class="lnk-tags"><a
+                                href="http://laptopkimcuong.com/thu-mua-laptop-cu-gia-cao"
+                                title="thu mua laptop cũ giá cao" target="_blank">thu mua laptop cũ giá
+                                cao</a></span>,
+                        <span class="lnk-tags"><a
+                                href="https://laptopkimcuong.com/thu-mua-laptop-gaming-cu-gia-cao-tphcm"
+                                title="thu mua gaming cũ giá cao" target="_blank">thu mua gaming cũ giá
+                                cao</a></span>,
+                        <span class="lnk-tags"><a href="https://ngoctraihoanggia.com/" title="Ngọc Trai"
+                                target="_blank">Ngọc Trai</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="ftr">
+                <div class="ftrSigns hidden-xs">
+                    <div class="badge"><a href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=27313"><span
+                                class="fa fa-check-circle"> ĐÃ ĐĂNG KÝ</span><br />Bộ Công Thương</a></div>
+                </div>
+                <div class="ftrCopyright">
+                    <div class="CopyrightText">Rao vặt 24h © 2025
+                        Đăng tin nhanh miễn phí, tin bất động sản, mua bán nhà đất, việc làm, tuyển dụng, tuyển sinh, dịch vụ, quảng cáo,điện thoại, laptop, điện máy, xe máy, ô tô, chợ đồ cũ giá rẻ...
+Rao vặt 24h chỉ chuyển tải thông tin. Không chịu bất kỳ trách nhiệm nào từ các tin này. </div>
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/init.js"></script>
+
+    <script src="js/dangtin.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const avatar = document.getElementById("usrAvt");
+            const box = document.getElementById("usrAvtText");
+
+            avatar.addEventListener("click", function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                box.style.display =
+                    box.style.display === "block" ? "none" : "block";
+            });
+
+            document.addEventListener("click", function () {
+                box.style.display = "none";
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const isLogin =
+                localStorage.getItem("isLogin") === "true" ||
+                sessionStorage.getItem("isLogin") === "true";
+
+            const user =
+                JSON.parse(localStorage.getItem("currentUser")) ||
+                JSON.parse(sessionStorage.getItem("currentUser"));
+
+            const userBox = document.getElementById("userLoggedBox");
+            const loginMenu = document.getElementById("loginMenu");
+            const postAdBtn = document.getElementById("postAdBtn");
+
+            if (isLogin && user) {
+                if (userBox) userBox.style.display = "block";
+                if (postAdBtn) postAdBtn.style.display = "block";
+                if (loginMenu) loginMenu.style.display = "none";
+
+                const nameEl = document.querySelector(".usr-name");
+                const emailEl = document.querySelector(".user-email");
+
+                if (nameEl) nameEl.innerHTML = `<i class='fa fa-info-circle fa-fw'></i> ${user.username}`;
+                if (emailEl) emailEl.innerHTML = `<i class='fa fa-envelope fa-fw'></i> ${user.email}`;
+
+            } else {
+                if (userBox) userBox.style.display = "none";
+                if (postAdBtn) postAdBtn.style.display = "none";
+                if (loginMenu) loginMenu.style.display = "block";
+            }
+        });
+    </script>
+
+    <script>
+        function logout() {
+            if (!confirm("Bạn có chắc muốn đăng xuất?")) return;
+
+            localStorage.removeItem("isLogin");
+            localStorage.removeItem("currentUser");
+            sessionStorage.clear();
+
+            window.location.href = "login.html";
+        }
+    </script>
+    <script type="text/javascript">
+
+        let Gmap = false;
+        let mapMarker;
+        let myLatLng = { lat: 12.248866, lng: 109.195850 };
+        let GMloaded = false;
+        function initMap() {
+            if ($('#map').val() === undefined) return;
+
+            if (!Gmap) {
+                Gmap = new google.maps.Map(document.getElementById('map'), {
+                    center: myLatLng,
+                    zoom: 13
+                });
+            }
+
+            mapMarker = new google.maps.Marker({
+                position: myLatLng,
+                map: Gmap,
+                draggable: true
+            });
+
+            google.maps.event.addListener(Gmap, 'dblclick', function (event) {
+                mapMarker.setPosition(Gmap.getCenter());
+            });
+            Gmap.addListener('click', function (event) {
+                Gmap.setCenter(event.latLng);
+
+                console.log(event.latLng.lat);
+            });
+
+            GMloaded = true;
+        }
+
+        function showGMarker() {
+            if (typeof mapMarker === 'undefined' || typeof Gmap === 'undefined') return;
+            mapMarker.setPosition(Gmap.getCenter());
+
+        }
+    </script>
+    <script data-cfasync="false"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo49f6xdk7HElktuBeYisZZp54kMcbYK4&callback=" async
+        defer></script>
+
+    <script type="text/javascript">
+        $('#siteprice').maskMoney({ precision: 1 });
+        function btnUploadAll_Click(obj) { modalDialog('Chọn "Đăng tin" để đăng bản tin kèm hình ảnh!') }
+        function extClearQueue() {
+            $.ajax({
+                url: '/ajax-upload-session.php',
+                type: "POST",
+                data: { "clr": 1 },
+                success: function (text) {
+                    $('#uplSess').html(text);
+                }
+            });
+        }
+        noscroll = 1;
+        var jwt = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiOTczNTEzIiwiaWF0IjoxNzY0MDM4MjA0LCJleHAiOjE3NjQxMjQ2MDQsInNzaWQiOiJ2ZHJyOHIxZDBlOHVvY3UzOTdmbGtuNjZrcyJ9.FIVRtnQ3z3-8QWfWyTe5U6S0mfJbj0AvNW_Oj7wPSrg';
+        $(window).load(function () {
+            initMap();
+
+        });
+        noscroll = 0;
+
+        $("#findMeGeo").on("click", function () {
+            if ("geolocation" in navigator) {
+                $("#markerPos").html("\u0110ang t\u00ecm ki\u1ebfm..."); let b; navigator.geolocation.getCurrentPosition(function (a) { b = a; myLatLng = { lat: b.coords.latitude, lng: b.coords.longitude }; "undefined" !== typeof Gmap && (Gmap.setCenter(myLatLng), showGMarker(), $("#markerPos").html('\u0110\u00e3 t\u00ecm th\u1ea5y, nh\u1edb ch\u1ecdn "L\u01b0u v\u1ecb tr\u00ed" n\u1ebfu mu\u1ed1n c\u1eadp nh\u1eadt!')) }, function (a) { console.log(a.code); switch (a.code) { case 1: modalDialog('B\u1ea1n ph\u1ea3i ch\u1ecdn "Allow" \u0111\u1ec3 s\u1eed d\u1ee5ng ch\u1ee9c n\u0103ng n\u00e0y!') }$("#markerPos").html("C\u00f3 l\u1ed7i khi s\u1eed d\u1ee5ng ch\u1ee9c n\u0103ng n\u00e0y!") },
+                    { maximumAge: 3E5 })
+            } else modalDialog("T\u00ednh n\u0103ng t\u00ecm v\u1ecb tr\u00ed c\u1ee7a b\u1ea1n kh\u00f4ng h\u1ed7 tr\u1ee3!")
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Language" content="vi" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name='viewport'
+        content='viewport-fit=cover, width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <title>Mạng rao vặt, mua bán, hàng mới về, đồ cổ, đồ cũ, đồ secondhand, Việt Nam - Mạng rao vặt, mua bán, hàng mới
+        về, đồ cũ, đồ secondhand, Việt Nam</title>
+    <script src="/callback_js/init.js?ver=2022.02.07.1" type="text/javascript"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tim.css">
+    <script type="text/javascript" src="https://fb02e1218898fb02e129e73.zapwp.com/generate_js:true"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="htmlContent">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <div id="prloading"><span class="ld-text"><img src="/images/connecting.gif" width="48"
+                            border="0"></span></div>
+                <div class="notification-nav visible-xs">
+                    <div class="notification notification-button pull-right"><a tabindex="0" role="button"
+                            data-toggle="popover" data-trigger="focus" data-placement="bottom"><i
+                                class="fa fa-bell fa-fw bottom"></i><span class="count notificount"
+                                style="display: none"></span></a></div>
+                </div>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand reload" href="index.html"><img src="images/logo.jpg" width="165"
+                        border="0" /></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav navbar-right bar-top">
+                    <li class="lf-postad visible-md visible-lg" id="postAdBtn"><a href="dangtin.html"><i
+                                class="fa fa-commenting fa-fw" aria-hidden="true"></i> Đăng tin <span
+                                class="hidden-xs">miễn phí</span></a></li>
+                    <li class="visible-xs"><a href="timkiem.html"><i class="fa fa-search fa-fw" aria-hidden="true"></i>
+                            Tìm
+                            kiếm</a></li>
+
+
+                    <li class="hidden-xs" id="userLoggedBox">
+                        <div class="pull-right avatar">
+                            <div class='avatar-img32' id='usrAvt'><a tabindex="0" data-placement="bottom" role="button"
+                                    data-toggle="popover" data-trigger="focus">
+                                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR99-ZMZeEtYlFVdT-HN3Hz0f_i64Zf76D67g&s'
+                                        alt='avatar' /></a></div>
+                            <div class='usrAvtBox' id='usrAvtText' style="display:none">
+                                <div class='avatar-text'>
+                                    <div class='usr-name'><i class='fa fa-info-circle fa-fw'></i> Kieu Nhi</div>
+                                </div>
+                                <div class='avatar-text'>
+                                    <div class='user-email'><i class='fa fa-envelope fa-fw'></i> vonhi@gmail.com
+                                    </div>
+                                </div>
+                                <div class='avatar-text'>
+                                    <div class='avt-link'><a href='quanly.html'><i class='fa fa-wpforms fa-fw'></i> Bản
+                                            tin
+                                            đã đăng <span class='n-posts'>0</span></a></div>
+                                </div>
+                                <div class='avatar-text'>
+                                    <div class='user-info'><a href='#'><i class='fa fa-user-circle-o fa-fw'></i> Chỉnh
+                                            sửa thông tin</a></div>
+                                </div>
+
+                                <div class='avatar-text'>
+                                    <div class='user-info'>
+                                        <a href="#" onclick="logout()">
+                                            <i class='fa fa-sign-out fa-fw'></i> Đăng xuất
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class='avatar-last-login'><i class='fa fa-history fa-fw'></i> <span
+                                        class='small'>Đăng nhập gần đây 12:24 - 20/11/2025</span></div>
+                                <div class='clearfix'></div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right bar-bellow" id="loginMenu">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false"><i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i> Đăng
+                            nhập<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="dangtin.html"><i class="fa fa-commenting fa-fw rvn-blue"></i> Đăng tin rao
+                                    vặt</a>
+                            </li>
+                            <li><a href="quanly.html"><i class="fa fa-wpforms fa-fw"></i> Chỉnh sửa, nâng cấp bản
+                                    tin</a>
+                            </li>
+                            <li><a href="login.html"><i class="fa fa-user fa-fw"></i> Thông tin tài khoản</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <span id="top-link-block" class="hidden">
+        <a href="#top" onclick="$('html,body').animate({scrollTop:0},'slow');return false;"></a>
+    </span>
+
+    <!-- child of the body tag -->
+
+    <div id="pgContent" class="clearfix">
+        <div class="rvn-menu-bar hidden-xs">
+            <form id="frmSearchBar" class="frmSearch" action="timkiem.html" method="get">
+                <div class="container">
+                    <div class="rvn-menu-city" id="loca_select">
+                        <select id='search_place' name='search_place' class='chosen-select form-control'>
+                            <option value='0'>Toàn quốc</option>
+                            <option value='1'>Hà Nội</option>'<option value='11'>Hồ Chí Minh</option>'<option
+                                value='250'>Bình Dương</option>'<option value='53'>Hải Phòng</option>'<option value='2'>
+                                Huế</option>'<option value='210'>Cần Thơ</option>'<option value='4'>Đà Nẵng</option>'
+                            <option value='14'>Khánh Hòa</option>'<option value='195'>An Giang</option>'<option
+                                value='233'>Bình Phước</option>'<option value='238'>Bình Định</option>'<option
+                                value='9'>Bình Thuận</option>'<option value='228'>Bạc Liêu</option>'<option value='6'>
+                                Phú Yên</option>'<option value='268'>Bắc Giang</option>'<option value='260'>Bắc Ninh
+                            </option>'<option value='254'>Bến Tre</option>'<option value='269'>Bắc Kạn</option>'<option
+                                value='523'>Cao Bằng</option>'<option value='192'>Cà Mau</option>'<option value='181'>
+                                Đắk Lắk</option>
+                        </select>
+                    </div>
+
+                    <div class="rvn-menu-cate">
+                        <select id='home_category' name='search_kat' class='chosen-select form-control'>
+                            <option value='0' add-data-content="<i class='fa fa-list fa-fw' aria-hidden='true'></i> ">
+                                Tất cả danh mục</option>
+                            <option value='11' add-data-content="<i class='fa fa-home fa-fw' aria-hidden='true'></i> ">
+                                Bất động sản</option>
+                            <option value='75' add-data-content="<i class='fa fa-users fa-fw' aria-hidden='true'></i> ">
+                                Việc làm - Tuyển sinh</option>
+                            <option value='73' add-data-content="<i class='fa fa-cogs fa-fw' aria-hidden='true'></i> ">
+                                Cơ khí - Máy móc</option>
+                            <option value='2'
+                                add-data-content="<i class='fa fa-television fa-fw' aria-hidden='true'></i> ">Điện máy -
+                                Điện tử</option>
+                        </select>
+                    </div>
+
+                    <div class="rvn-menu-search">
+                        <div class="input-group">
+                            <input type="text" name="kw" id="kw" class="form-control typeahead" autocomplete="off"
+                                data-provide="typeahead" placeholder="Nhập thông tin cần tìm...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit">Tìm kiếm!</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="clearfix"></div>
+
+
+        <div id="pgDetail" class="container pgBody">
+            <div class="detail-body rows">
+                <div class="col-md-12">
+                    <div id="prloading">Loading...</div>
+                    <a id="LcAnchor" name=""></a>
+                    <ol class="breadcrumb">
+                        <li id="view_cate"><a href="/danh-muc/Nha-cua-Dat-dai">Bất động sản</a></li>
+                        <li id="view_subcate" class="active"><a
+                                href="/danh-muc/Nha-cua-Dat-dai.Thue-va-cho-thue-nha">Thuê và cho thuê nhà</a></li>
+                    </ol>
+                </div>
+                <div class="rows">
+                    <div class="col-md-9">
+                        <div class="page-header">
+                            <h1 class="site-title">Cho thuê sàn văn phòng tầng 1 giá từ 12tr tại Vin Marina</h1>
+                            <div class="sub-title">
+                                <div><i class="fa fa-clock-o"></i> 25/11/2025</div>
+                                <div><i class="fa fa-eye"></i> 0</div>
+                                <div><i class="fa fa-tag"></i> Mã tin 8599773</div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="page-content">
+                            <blockquote>
+                                <div class="detail-img clearfix">
+                                    <div class="detail-img-border hidden-xs">
+                                        <a href="images/view.jpg" data-gallery="lg8599773" data-type="image"
+                                            data-toggle="lightbox" data-title="" title=""><img
+                                                data-src="images/view.jpg" src="images/view.jpg"
+                                                class="img-thumbnail img-rounded" alt=""></a>
+                                        <div class="highslide-caption"></div>
+                                    </div>
+                                    <div class="detail-img-border visible-xs">
+                                        <a href="images/view.jpg" data-gallery="sm8599773" data-type="image"
+                                            data-toggle="lightbox" data-title="" title=""><img
+                                                data-src="images/view.jpg" src="images/view.jpg"
+                                                class="img-thumbnail img-rounded" alt=""></a>
+                                        <div class="highslide-caption"></div>
+                                    </div>
+                                    <div class="detail-img-border hidden-xs">
+                                        <a href="images/view.jpg" data-gallery="lg8599773" data-type="image"
+                                            data-toggle="lightbox" data-title="" title=""><img
+                                                data-src="images/view.jpg" src="images/view.jpg"
+                                                class="img-thumbnail img-rounded" alt=""></a>
+                                        <div class="highslide-caption"></div>
+                                    </div>
+                                </div>
+
+                                <p class="read-more-wrap">
+                                    📢 CHO THUÊ SÀN VĂN PHÒNG TẦNG 1 – VINHOMES MARINA 📢<br />
+                                    <br />
+                                    🍎🍎Bạn đang tìm một không gian văn phòng chuyên nghiệp, vị trí đắc địa tại Hải
+                                    Phòng? Đây <br />
+                                    chính là lựa chọn hoàn hảo:<br />
+                                    <br />
+                                    ✨ Thông tin chi tiết:<br />
+                                    • Vị trí: Tầng 1 Shophouse Vinhomes Marina – KĐT đẳng cấp Hải Phòng.<br />
+                                    • Diện tích: 80m²<br />
+                                    • Thiết kế: Thông sàn, mặt tiền rộng, thoáng sáng tự nhiên.<br />
+                                    • Phù hợp: Văn phòng công ty, showroom, trung tâm đào tạo, spa, phòng giao
+                                    dịch…<br />
+                                    • Tiện ích: Hưởng trọn hệ sinh thái Vinhomes Marina – đỗ xe rộng rãi, an ninh 24/7,
+                                    giao thông <br />
+                                    thuận tiện.<br />
+                                    Giá từ 12 triệu/ tháng (Bao phí quản lý)<br />
+                                    Liên hệ: 0383529210
+                                </p>
+
+
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="modal fade" id="confirm-send" tabindex="-1" role="dialog"
+                            aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="form-inline">Bạn vui lòng nhập 4 chữ số này <img id="imgcode"
+                                                border="0" /> vào ô dưới để tiếp tục!</div>
+                                    </div>
+                                    <div class="modal-body" id="modalText">
+                                        <input type="text" name="imgcode4" id="imgcode4" class="form-control input-sm"
+                                            style="width:100px" required />
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default"
+                                            data-dismiss="modal">Cancel</button>
+                                        <a class="btn btn-danger btn-ok" data-dismiss="modal" id="btnOkSend">Ok</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="send-resp" tabindex="-1" role="dialog"
+                            aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="form-inline">Thông báo!</div>
+                                    </div>
+                                    <div class="modal-body" id="modalTextResp">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a class="btn btn-danger btn-ok" data-dismiss="modal">Ok</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ads-similar">
+                            <div style="padding: 3px;"><i class="fa fa-list-ul"></i> Tin đăng cùng danh mục</div>
+                            <div id="similarPostsContainer"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="rows ftr-4cols hidden-xs clearfix">
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-title">Liên hệ Raovat24h</div>
+
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-title">Thông tin Raovat24h</div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-title">Hướng dẫn</div>
+                </div>
+                <div class="col-md-3 hidden-sm">
+                    <div class="ftr-title">Liên kết ưu tiên</div>
+                </div>
+            </div>
+            <div class="rows hidden-xs clearfix">
+                <div class="col-md-3 col-sm-4">
+
+                    <div class="ftr-content">
+                         Địa chỉ: 126 Nguyễn Thiện Thành, Phường 5, Trà Vinh<br>ĐT:&nbsp;0817166927
+                        (Zalo)<br>Email: <a href="vonhi5389@gmail.com" class="" classname="" target="_blank"
+                            name="">vonhi5389@gmail.com</a> 
+                        <div class="fb-icon"><a target="_blank" href="https://www.facebook.com/raovat2000/"><i
+                                    class="fa fa-facebook-official fa-2x"></i></a> <span class="dev-icon"><a
+                                    title="fullstack developer" href="https://globalvietnam.com" target="_blank"><i
+                                        class="fa fa-code fa-2x"></i></a> </span></div>
+
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-content">
+                        <div><a href="/help?p=tin-tuc"><i class="fa fa-caret-right fa-fw"></i> Tin tức</a></div>
+                        <div><a href="/help?p=quy-che"><i class="fa fa-caret-right fa-fw"></i> Quy chế hoạt động</a>
+                        </div>
+                        <div><a href="/help?p=dieu-khoan"><i class="fa fa-caret-right fa-fw"></i> Điều khoản sử
+                                dụng</a>
+                        </div>
+                        <div><a href="#?subj=1/Bang-gia-dich-vu.html"><i class="fa fa-caret-right fa-fw"></i>
+                                Bảng giá</a></div>
+                        <div><a href="/help?p=lien-he"><i class="fa fa-caret-right fa-fw"></i> Liên hệ</a></div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-content">
+                        <div><a href="#?subj=27#-dang-ky-thanh-vien.html" class="" classname="" target="" name="">Hướng
+                                dẫn đăng ký thành viên</a></div>
+                        <div><a href="#?subj=28#-dang-tin.html" class="" classname="" target="" name=""><i
+                                    class="fa fa-caret-right fa-fw"></i> Hướng dẫn đăng tin</a></div>
+                        <div><a href="#?subj=10#-thanh-toan-.html" class="" classname="" target="" name=""><i
+                                    class="fa fa-caret-right fa-fw"></i> Hướng dẫn thanh toán</a></div>
+                    </div>
+                </div>
+                <div class="col-md-3 hidden-sm">
+                    <div class="ftr-content">
+                        <span class="lnk-tags"><a href="https://sgc.vn/dich-vu-ma-qr-code-dong/"
+                                title="thiết kế web, SEO" target="_blank">SGC, thiết kế QR code</a></span>, <span
+                            class="lnk-tags"><a href="https://ngoctraihoanggia.com/" title="ngoc trai that"
+                                target="_blank">ngoc trai that</a></span>, <span class="lnk-tags"><a
+                                href="https://ngoctraihoanggia.com/" title="giá ngọc trai" target="_blank">giá ngọc
+                                trai</a></span>, <span class="lnk-tags"><a
+                                href="http://laptopkimcuong.com/thu-mua-laptop-cu-gia-cao"
+                                title="thu mua laptop cũ giá cao" target="_blank">thu mua laptop cũ giá
+                                cao</a></span>,
+                        <span class="lnk-tags"><a
+                                href="https://laptopkimcuong.com/thu-mua-laptop-gaming-cu-gia-cao-tphcm"
+                                title="thu mua gaming cũ giá cao" target="_blank">thu mua gaming cũ giá
+                                cao</a></span>,
+                        <span class="lnk-tags"><a href="https://ngoctraihoanggia.com/" title="Ngọc Trai"
+                                target="_blank">Ngọc Trai</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="ftr">
+                <div class="ftrSigns hidden-xs">
+                    <div class="badge"><a href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=27313"><span
+                                class="fa fa-check-circle"> ĐÃ ĐĂNG KÝ</span><br />Bộ Công Thương</a></div>
+                </div>
+                <div class="ftrCopyright">
+                    <div class="CopyrightText">Rao vặt 24h © 2025
+                        Đăng tin nhanh miễn phí, tin bất động sản, mua bán nhà đất, việc làm, tuyển dụng, tuyển sinh, dịch vụ, quảng cáo,điện thoại, laptop, điện máy, xe máy, ô tô, chợ đồ cũ giá rẻ...
+Rao vặt 24h chỉ chuyển tải thông tin. Không chịu bất kỳ trách nhiệm nào từ các tin này. </div>
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const avatar = document.getElementById("usrAvt");
+            const box = document.getElementById("usrAvtText");
+
+            avatar.addEventListener("click", function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                box.style.display =
+                    box.style.display === "block" ? "none" : "block";
+            });
+
+            document.addEventListener("click", function () {
+                box.style.display = "none";
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const isLogin =
+                localStorage.getItem("isLogin") === "true" ||
+                sessionStorage.getItem("isLogin") === "true";
+
+            const user =
+                JSON.parse(localStorage.getItem("currentUser")) ||
+                JSON.parse(sessionStorage.getItem("currentUser"));
+
+            const userBox = document.getElementById("userLoggedBox");
+            const loginMenu = document.getElementById("loginMenu");
+            const postAdBtn = document.getElementById("postAdBtn");
+
+            if (isLogin && user) {
+                if (userBox) userBox.style.display = "block";
+                if (postAdBtn) postAdBtn.style.display = "block";
+                if (loginMenu) loginMenu.style.display = "none";
+
+                const nameEl = document.querySelector(".usr-name");
+                const emailEl = document.querySelector(".user-email");
+
+                if (nameEl) nameEl.innerHTML = `<i class='fa fa-info-circle fa-fw'></i> ${user.username}`;
+                if (emailEl) emailEl.innerHTML = `<i class='fa fa-envelope fa-fw'></i> ${user.email}`;
+
+            } else {
+                if (userBox) userBox.style.display = "none";
+                if (postAdBtn) postAdBtn.style.display = "none";
+                if (loginMenu) loginMenu.style.display = "block";
+            }
+        });
+    </script>
+
+    <script>
+        function logout() {
+            if (!confirm("Bạn có chắc muốn đăng xuất?")) return;
+
+            localStorage.removeItem("isLogin");
+            localStorage.removeItem("currentUser");
+            sessionStorage.clear();
+
+            window.location.href = "login.html";
+        }
+    </script>
+    <script>
+        const STORAGE_POSTS_KEY = "ALL_POSTS";
+        let allPosts = JSON.parse(localStorage.getItem(STORAGE_POSTS_KEY)) || [];
+        const urlParams = new URLSearchParams(window.location.search);
+        const postId = parseInt(urlParams.get("id"));
+
+        const post = allPosts.find(item => item.id === postId);
+
+        if (post) {
+            document.querySelector('.site-title').textContent = post.title;
+            document.querySelector('.sub-title').innerHTML = `
+            <div><i class="fa fa-clock-o"></i> ${post.time}</div>
+            <div><i class="fa fa-eye"></i> ${post.views}</div>
+            <div><i class="fa fa-tag"></i> Mã tin ${post.id}</div>
+            <div><i class="fa fa-map-marker"></i> ${post.location.cityName}</div>
+        `;
+
+            document.querySelector('.page-content').innerHTML = `
+            <div class="detail-img clearfix">
+                <div class="detail-img-border">
+                    <a href="${post.img}" data-gallery="lg${post.id}" data-type="image" data-toggle="lightbox" title="">
+                        <img src="${post.img}" class="img-thumbnail img-rounded" alt="">
+                    </a>
+                </div>
+            </div>
+            <p>${post.description}</p>
+            <h3>Giá bán: ${post.price} VND</h3>
+            <div>
+                <strong>Đơn vị:</strong> ${post.unit}
+            </div>
+        `;
+
+            const currentCategory = post.cate;
+
+            const similarPosts = allPosts.filter(post => post.cate === currentCategory && post.id !== postId).slice(0, 3);  
+
+            const similarPostsContainer = document.getElementById("similarPostsContainer");
+
+            similarPosts.forEach(post => {
+                similarPostsContainer.innerHTML += `
+            <div class="listItem clearfix hvr-bubble-bottom0">
+                <a href="/detail/${post.id}-${post.title.replace(/\s+/g, '-').toLowerCase()}.html">
+                    <div class="rounded-bo clearfix">
+                        <div class="rvn-item-content">
+                            <div class="rvn-item-no"><span class="badge">${post.cate === 'office' ? 'T' : 'B'}</span></div>
+                            <div class="rvn-item-title">${post.title}</div>
+                            <div class="rvn-item-date"><i class="fa fa-clock-o fa-fw"></i> ${post.time} <span class="rvn-item-views"><i class="fa fa-eye fa-fw"></i> ${post.views}</span></div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+            `;
+            });
+        } else {
+            document.querySelector('.page-content').innerHTML = "<p>Không tìm thấy tin đăng này.</p>";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Language" content="vi" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name='viewport'
+        content='viewport-fit=cover, width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <title>Mạng rao vặt, mua bán, hàng mới về, đồ cổ, đồ cũ, đồ secondhand, Việt Nam - Mạng rao vặt, mua bán, hàng mới
+        về, đồ cũ, đồ secondhand, Việt Nam</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tim.css">
+    <script type="text/javascript" src="https://fb02e1218898fb02e129e73.zapwp.com/generate_js:true"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+
+<body class="htmlContent">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <div id="prloading"><span class="ld-text"><img src="/images/connecting.gif" width="48"
+                            border="0"></span></div>
+                <div class="notification-nav visible-xs">
+                    <div class="notification notification-button pull-right"><a tabindex="0" role="button"
+                            data-toggle="popover" data-trigger="focus" data-placement="bottom"><i
+                                class="fa fa-bell fa-fw bottom"></i><span class="count notificount"
+                                style="display: none"></span></a></div>
+                </div>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand reload" href="index.html"><img src="images/logo.jpg" width="165"
+                        border="0" /></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav navbar-right bar-top">
+                    <li class="lf-postad visible-md visible-lg" id="postAdBtn"><a href="dangtin.html"><i
+                                class="fa fa-commenting fa-fw" aria-hidden="true"></i> Đăng tin <span
+                                class="hidden-xs">miễn phí</span></a></li>
+                    <li class="visible-xs"><a href="timkiem.html"><i class="fa fa-search fa-fw" aria-hidden="true"></i>
+                            Tìm
+                            kiếm</a></li>
+
+
+                    <li class="hidden-xs" id="userLoggedBox">
+                        <div class="pull-right avatar">
+                            <div class='avatar-img32' id='usrAvt'><a tabindex="0" data-placement="bottom" role="button"
+                                    data-toggle="popover" data-trigger="focus">
+                                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR99-ZMZeEtYlFVdT-HN3Hz0f_i64Zf76D67g&s'
+                                        alt='avatar' /></a></div>
+                            <div class='usrAvtBox' id='usrAvtText' style="display:none">
+                                <div class='avatar-text'>
+                                    <div class='usr-name'><i class='fa fa-info-circle fa-fw'></i> Kieu Nhi</div>
+                                </div>
+                                <div class='avatar-text'>
+                                    <div class='user-email'><i class='fa fa-envelope fa-fw'></i> vonhi@gmail.com
+                                    </div>
+                                </div>
+                                <div class='avatar-text'>
+                                    <div class='avt-link'><a href='quanly.html'><i class='fa fa-wpforms fa-fw'></i> Bản
+                                            tin
+                                            đã đăng <span class='n-posts'>0</span></a></div>
+                                </div>
+                                <div class='avatar-text'>
+                                    <div class='user-info'><a href='#'><i class='fa fa-user-circle-o fa-fw'></i> Chỉnh
+                                            sửa thông tin</a></div>
+                                </div>
+
+                                <div class='avatar-text'>
+                                    <div class='user-info'>
+                                        <a href="#" onclick="logout()">
+                                            <i class='fa fa-sign-out fa-fw'></i> Đăng xuất
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class='avatar-last-login'><i class='fa fa-history fa-fw'></i> <span
+                                        class='small'>Đăng nhập gần đây 12:24 - 20/11/2025</span></div>
+                                <div class='clearfix'></div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right bar-bellow" id="loginMenu">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false"><i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i> Đăng
+                            nhập<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="dangtin.html"><i class="fa fa-commenting fa-fw rvn-blue"></i> Đăng tin rao
+                                    vặt</a>
+                            </li>
+                            <li><a href="quanly.html"><i class="fa fa-wpforms fa-fw"></i> Chỉnh sửa, nâng cấp bản
+                                    tin</a>
+                            </li>
+                            <li><a href="login.html"><i class="fa fa-user fa-fw"></i> Thông tin tài khoản</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <span id="top-link-block" class="hidden">
+        <a href="#top" onclick="$('html,body').animate({scrollTop:0},'slow');return false;"></a>
+    </span>
+
+    <!-- child of the body tag -->
+
+    <div id="pgContent" class="clearfix">
+
+        <div class="container pgBody">
+            <div class="dang-tin-body rows">
+                <div class="col-md-9">
+                    <div class="dang-tin">
+
+                        <div class="dang-tin-step clearfix">
+                            <div class="step1" style="width:35%"><i class="fa fa-list"></i> Danh mục</div>
+                            <div class="step2" style="width:35%"><i class="fa fa-eye"></i> Nội dung</div>
+                            <div class="step3" style="width:30%"><i class="fa fa-check"></i> Kiểm tra</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" style="width: 35%">
+                                <span class="sr-only">10% Complete (danger)</span>
+                            </div>
+                            <div class="progress-bar progress-bar-warning" style="width: 35%">
+                                <span class="sr-only">20% Complete (warning)</span>
+                            </div>
+                            <div class="progress-bar progress-bar-success" style="width: 0%">
+                                <span class="sr-only">35% Complete (success)</span>
+                            </div>
+                        </div>
+                        <div class="post-step2">
+                            <div id="alerts"></div>
+                            <script src="/cache/jsLocations.js" type="text/javascript"></script>
+                            <form id="frmStep2" onsubmit="return false;">
+                                <div class="row">
+                                    <div class="form-row">
+                                        <div class="col-md-3"><i class="fa fa-map-marker fa-fw"></i> Tỉnh thành/Quận
+                                            huyện</div>
+                                        <div class="col-md-9 clearfix">
+                                            <div class="postCityId"><select id='cityid' name='cityid'
+                                                    class='chosen-select chosen-select-n form-control'>
+                                                    <option value=''>Tỉnh thành</option>
+                                                    <option value='1'>Hà Nội</option>'<option value='11'>Hồ Chí Minh
+                                                    </option>'<option value='250'>Bình Dương</option>'<option
+                                                        value='53'>Hải Phòng</option>'<option value='2'>Huế</option>'
+                                                    <option value='210'>Cần Thơ</option>'<option value='4'>Đà Nẵng
+                                                    </option>'<option value='14'>Khánh Hòa</option>'<option value='195'>
+                                                        An Giang</option>'<option value='233'>Bình Phước</option>'
+                                                    <option value='238'>Bình Định</option>'<option value='9'>Bình Thuận
+                                                    </option>'<option value='228'>Bạc Liêu</option>'<option value='6'>
+                                                        Phú Yên</option>'<option value='268'>Bắc Giang</option>'<option
+                                                        value='260'>Bắc Ninh</option>'<option value='254'>Bến Tre
+                                                    </option>'<option value='269'>Bắc Kạn</option>'<option value='523'>
+                                                        Cao Bằng</option>'<option value='192'>Cà Mau</option>'<option
+                                                        value='181'>Đắk Lắk</option>'<option value='784'>Đắk Nông
+                                                    </option>'<option value='216'>Đồng Nai</option>'<option value='71'>
+                                                        Đồng Tháp</option>'<option value='792'>Điện Biên</option>'
+                                                    <option value='72'>Gia Lai</option>'<option value='77'>Hà Giang
+                                                    </option>'<option value='109'>Hà Nam</option>'<option value='98'>Hà
+                                                        Tĩnh</option>'<option value='92'>Hải Dương</option>'<option
+                                                        value='540'>Hậu Giang</option>'<option value='130'>Hoà Bình
+                                                    </option>'<option value='277'>Vũng Tàu</option>'<option value='141'>
+                                                        Hưng Yên</option>'<option value='154'>Kiên Giang</option>'
+                                                    <option value='689'>Kon Tum</option>'<option value='175'>Lai Châu
+                                                    </option>'<option value='162'>Lào Cai</option>'<option value='285'>
+                                                        Lâm Đồng</option>'<option value='59'>Lạng Sơn</option>'<option
+                                                        value='294'>Long An</option>'<option value='380'>Nam Định
+                                                    </option>'<option value='511'>Nghệ An</option>'<option value='520'>
+                                                        Ninh Bình</option>'<option value='392'>Ninh Thuận</option>'
+                                                    <option value='396'>Phú Thọ</option>'<option value='416'>Quảng Bình
+                                                    </option>'<option value='424'>Quảng Nam</option>'<option
+                                                        value='438'>Quảng Ngãi</option>'<option value='451'>Quảng Ninh
+                                                    </option>'<option value='465'>Quảng Trị</option>'<option
+                                                        value='514'>Sóc Trăng</option>'<option value='501'>Sơn La
+                                                    </option>'<option value='495'>Tây Ninh</option>'<option value='348'>
+                                                        Thanh Hoá</option>'<option value='485'>Thái Bình</option>'
+                                                    <option value='474'>Thái Nguyên</option>'<option value='341'>Tiền
+                                                        Giang</option>'<option value='332'>Trà Vinh</option>'<option
+                                                        value='314'>Tuyên Quang</option>'<option value='321'>Vĩnh Long
+                                                    </option>'<option value='186'>Vĩnh Phúc</option>'<option
+                                                        value='323'>Yên Bái</option>'<option value='903'>Các tỉnh khác
+                                                    </option>'
+                                                </select></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-3"><i class="fa fa-text-width fa-fw"></i> Tiêu đề bản tin
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input type="text" name="sitetitle" class="form-control" data-maxlength="60"
+                                                value="" required />
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="col-md-3"><i class="fa fa-filter fa-fw"></i> Loại tin</div>
+                                        <div class="col-md-9">
+                                            <div class="item-type"><select
+                                                    class='chosen-select chosen-select-n form-control' id='notify'
+                                                    name='notify'>
+                                                    <option value="">Chọn loại tin</option>
+                                                    <option value="B">Cần bán</option>
+                                                    <option value="M">Cần mua</option>
+                                                    <option value="H">Hợp tác - Cộng tác</option>
+                                                    <option value="Q">Quảng cáo</option>
+                                                    <option value="R">Rao vặt</option>
+                                                    <option value="S">Sang nhượng</option>
+                                                    <option value="T">Thuê - Cho thuê</option>
+                                                    <option value="V">Việc làm</option>
+                                                </select></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-3"><i class="fa fa-money fa-fw"></i> Bảng giá</div>
+                                        <div class="col-md-9">
+                                            <div>
+                                                <div class="price-input"><input data-precision="0"
+                                                        class="form-control form-post-input" id="siteprice" type="text"
+                                                        name="siteprice" value="" />
+                                                    <select class="chosen-select chosen-select-n form-control"
+                                                        name="sitecurrency" id="sitecurrency">
+                                                        <option value='1'>đ</option>
+                                                        <option value='2'>usd</option>
+                                                        <option value='3'>lượng vàng</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-3"><i class="fa fa-ellipsis-h fa-fw"></i> Đơn vị tính</div>
+                                        <div class="col-md-9">
+                                            <div>
+                                                <div class="price-input"><input maxlength="16"
+                                                        class="form-control form-post-input" type="text" name="siteunit"
+                                                        value="" data-toggle="tooltip" data-placement="right"
+                                                        title="cái, chiếc, m2, ngày, giờ...." />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="col-md-3"><i class="fa fa-comment-o fa-fw"></i> Nội dung bản tin
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="texte">
+                                                <textarea name="sitedescription" wrap="on" id="sitedescription"
+                                                    class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="col-md-3"><i class="fa fa-tags fa-fw"></i> Tags tìm kiếm</div>
+                                        <div class="col-md-9">
+                                            <div><input title="ví dụ: điện thoại, iphone 7, hàng xách tay..."
+                                                    data-toggle="tooltip" class="form-control" name="sitetags" value=""
+                                                    placeholder="Nhập vào từ khóa mô tả nội dung bản tin"
+                                                    maxlength="60"> </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="col-md-3"><i class="fa fa-clock-o fa-fw"></i> Thời hạn</div>
+                                        <div class="col-md-9">
+                                            <div class="expire-days">
+                                                <select class='chosen-select chosen-select-n form-control'
+                                                    name='expire_days'>
+                                                    <option value="1">1 ngày</option>
+                                                    <option value="2">2 ngày</option>
+                                                    <option value="3" selected>3 ngày</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-3"><i class="fa fa-picture-o fa-fw"></i> Hình ảnh
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div id="uplSess"></div>
+                                            <div id="uplImages"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-3"><i class="fa fa-eye-slash fa-fw"></i> Ẩn bản tin này</div>
+                                        <div class="col-md-9"><label><input type="checkbox" name="hidden" value="1" />
+                                                <span> (Khi xem các bản tin khác của bạn)</span></label></div>
+                                    </div>
+
+
+
+                                    <div class="form-row">
+                                        <div class="col-md-3">&nbsp;</div>
+                                        <div class="col-md-9">
+                                            <button type="submit" name="submit_post" value="Đăng tin"
+                                                class="btn btn-default btn-success"><i class="fa fa-cloud-upload"></i>
+                                                Đăng tin</button>
+                                            <br><br>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="clearfix"></div>
+
+                                <input type="hidden" name="v" value="" />
+                                <input type="hidden" name="is_html" value="" />
+                                <input type="hidden" name="siteid" id="siteid" value="" />
+                                <input type="hidden" name="mode" value="" />
+                                <input type="hidden" name="flag" />
+                                <input type="hidden" name="lptime" value="1764039494" />
+                                <input type="hidden" name="quickpost" value="0" />
+                                <input type="hidden" name="sitecatid" value="11" />
+                                <input type="hidden" name="subcatid" value="85" />
+
+                                <input type="hidden" name="opt_fields_value"
+                                    value="YTo5OntpOjQ7czo0OiJidHZsIjtpOjg7czowOiIiO2k6NTtzOjA6IiI7aTo5O3M6MDoiIjtpOjEwO3M6MDoiIjtpOjIzO3M6MDoiIjtpOjEyO3M6MDoiIjtpOjMwO3M6MDoiIjtpOjExO3M6MDoiIjt9" />
+                                <input type="hidden" name="up_hash" id="up_hash"
+                                    value="0124f25f0c1a0b38fd2174d7bcd1fd8f" />
+                                <input type="hidden" name="mapinfo" id="mapinfo" />
+                            </form>
+                            <form name="_ajaxreq" method="post"></form>
+                            <form name="load_subcity" method="post" action="_subcity.php">
+                                <input type="hidden" name="cityid" />
+                            </form>
+
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function () {
+                                    console.log(123)
+                                    const STORAGE_KEY = "postDraft";
+                                    const ALL_POSTS_KEY = "ALL_POSTS";
+
+                                    let postData = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+                                    console.log("POST DATA: " + JSON.stringify(postData, null, 2));
+
+                                    document.getElementById("frmStep2").addEventListener("submit", function (e) {
+                                        e.preventDefault();
+
+                                        const citySelect = document.getElementById("cityid");
+                                        const cityId = citySelect.value;
+                                        const cityName = citySelect.options[citySelect.selectedIndex]?.text || "";
+
+                                        postData.location = {
+                                            cityId,
+                                            cityName
+                                        };
+
+                                        postData.post = {
+                                            title: document.querySelector("input[name='sitetitle']").value,
+                                            type: document.getElementById("notify").value,
+                                            price: document.getElementById("siteprice").value,
+                                            currency: document.getElementById("sitecurrency").value,
+                                            unit: document.querySelector("input[name='siteunit']").value,
+                                            description: document.getElementById("sitedescription").value,
+                                            tags: document.querySelector("input[name='sitetags']").value,
+                                            expireDays: document.querySelector("select[name='expire_days']").value,
+                                            hidden: document.querySelector("input[name='hidden']").checked ? 1 : 0
+                                        };
+
+                                        postData.createdAt = new Date().toISOString();
+
+                                        localStorage.setItem(STORAGE_KEY, JSON.stringify(postData));
+
+                                        let allPosts = JSON.parse(localStorage.getItem(ALL_POSTS_KEY)) || [];
+
+                                        const newPost = {
+                                            id: Date.now(),
+                                            title: postData.post.title,
+                                            cate: postData.category?.slug || "",
+                                            cateName: postData.category?.name || "",
+                                            subcateName: postData.subcategory?.name || "",
+                                            price: postData.post.price,
+                                            currency: postData.post.currency,
+                                            unit: postData.post.unit,
+                                            location: postData.location,
+                                            description: postData.post.description,
+                                            img: "images/tin.jpg",
+                                            time: "Vừa đăng",
+                                            views: 0,
+                                            createdAt: postData.createdAt, 
+                                            status: "pending"
+                                        };
+
+                                        allPosts.unshift(newPost);
+                                        localStorage.setItem(ALL_POSTS_KEY, JSON.stringify(allPosts));
+
+                                        localStorage.removeItem(STORAGE_KEY);
+
+                                        alert("✅ Đăng tin thành công!");
+
+                                    });
+                                });
+                            </script>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="map-help">
+                        <blockquote><i class="fa fa-map-marker"></i> Chọn vị trí trên bản đồ sẽ giúp người dùng dễ dàng
+                            liên hệ với bạn
+                            <footer>Di chuyển Marker để lưu vị trí</footer>
+                        </blockquote>
+                    </div>
+                    <blockquote>
+                        <div id="map"></div>
+                        <div>
+                            <img id="mapImageStatic">
+                        </div>
+                        <div>
+                            <button class="btn btn-warning btn-sm" onclick="showGMarker()"><i
+                                    class="fa fa-map-marker"></i> Hiện Marker</button>
+
+                        </div>
+                    </blockquote>
+                    <div class="btn-group">
+                        <div id="markerPos"></div>
+                        <div class="map-btn">
+                            <button class="btn btn-success btn-sm" id="findMeGeo"><i class="fa fa-location-arrow"></i>
+                                Vị trí hiện tại</button>
+                            <button class="btn btn-primary btn-sm"
+                                onclick="saveGMarker();modalDialog('Vị trí trên bản đồ đã lưu!')"><i
+                                    class="fa fa-save"></i> Lưu vị trí</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal fade" id="send-resp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="form-inline">Thông báo!</div>
+                    </div>
+                    <div class="modal-body" id="modalTextResp">
+                        Đang xử lý thông tin!
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn btn-danger btn-ok" data-dismiss="modal">Ok</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="allow_notification" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-400">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="form-inline">Nhận thông báo liên hệ từ người dùng?</div>
+                    </div>
+                    <div class="modal-body text-center rvn-light-blue-bg">
+                        <img src="/images/allow.png" border="0" width="307" class="img-rounded">
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn btn-success btn-ok" data-dismiss="modal" id="btnNotification">Allow</a> <a
+                            class="btn btn-danger btn-cancel" id="btnCancelNotification" data-dismiss="modal">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="rows ftr-4cols hidden-xs clearfix">
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-title">Liên hệ Raovat24h</div>
+
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-title">Thông tin Raovat24h</div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-title">Hướng dẫn</div>
+                </div>
+                <div class="col-md-3 hidden-sm">
+                    <div class="ftr-title">Liên kết ưu tiên</div>
+                </div>
+            </div>
+            <div class="rows hidden-xs clearfix">
+                <div class="col-md-3 col-sm-4">
+
+                    <div class="ftr-content">
+                        Địa chỉ: 126 Nguyễn Thiện Thành, Phường 5, Trà Vinh<br>ĐT:&nbsp;0817166927
+                        (Zalo)<br>Email: <a href="vonhi5389@gmail.com" class="" classname="" target="_blank"
+                            name="">vonhi5389@gmail.com</a>
+                        <div class="fb-icon"><a target="_blank" href="https://www.facebook.com/raovat2000/"><i
+                                    class="fa fa-facebook-official fa-2x"></i></a> <span class="dev-icon"><a
+                                    title="fullstack developer" href="https://globalvietnam.com" target="_blank"><i
+                                        class="fa fa-code fa-2x"></i></a> </span></div>
+
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-content">
+                        <div><a href="/help?p=tin-tuc"><i class="fa fa-caret-right fa-fw"></i> Tin tức</a></div>
+                        <div><a href="/help?p=quy-che"><i class="fa fa-caret-right fa-fw"></i> Quy chế hoạt động</a>
+                        </div>
+                        <div><a href="/help?p=dieu-khoan"><i class="fa fa-caret-right fa-fw"></i> Điều khoản sử
+                                dụng</a>
+                        </div>
+                        <div><a href="#?subj=1/Bang-gia-dich-vu.html"><i class="fa fa-caret-right fa-fw"></i>
+                                Bảng giá</a></div>
+                        <div><a href="/help?p=lien-he"><i class="fa fa-caret-right fa-fw"></i> Liên hệ</a></div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="ftr-content">
+                        <div><a href="#?subj=27#-dang-ky-thanh-vien.html" class="" classname="" target="" name="">Hướng
+                                dẫn đăng ký thành viên</a></div>
+                        <div><a href="#?subj=28#-dang-tin.html" class="" classname="" target="" name=""><i
+                                    class="fa fa-caret-right fa-fw"></i> Hướng dẫn đăng tin</a></div>
+                        <div><a href="#?subj=10#-thanh-toan-.html" class="" classname="" target="" name=""><i
+                                    class="fa fa-caret-right fa-fw"></i> Hướng dẫn thanh toán</a></div>
+                    </div>
+                </div>
+                <div class="col-md-3 hidden-sm">
+                    <div class="ftr-content">
+                        <span class="lnk-tags"><a href="https://sgc.vn/dich-vu-ma-qr-code-dong/"
+                                title="thiết kế web, SEO" target="_blank">SGC, thiết kế QR code</a></span>, <span
+                            class="lnk-tags"><a href="https://ngoctraihoanggia.com/" title="ngoc trai that"
+                                target="_blank">ngoc trai that</a></span>, <span class="lnk-tags"><a
+                                href="https://ngoctraihoanggia.com/" title="giá ngọc trai" target="_blank">giá ngọc
+                                trai</a></span>, <span class="lnk-tags"><a
+                                href="http://laptopkimcuong.com/thu-mua-laptop-cu-gia-cao"
+                                title="thu mua laptop cũ giá cao" target="_blank">thu mua laptop cũ giá
+                                cao</a></span>,
+                        <span class="lnk-tags"><a
+                                href="https://laptopkimcuong.com/thu-mua-laptop-gaming-cu-gia-cao-tphcm"
+                                title="thu mua gaming cũ giá cao" target="_blank">thu mua gaming cũ giá
+                                cao</a></span>,
+                        <span class="lnk-tags"><a href="https://ngoctraihoanggia.com/" title="Ngọc Trai"
+                                target="_blank">Ngọc Trai</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="ftr">
+                <div class="ftrSigns hidden-xs">
+                    <div class="badge"><a href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=27313"><span
+                                class="fa fa-check-circle"> ĐÃ ĐĂNG KÝ</span><br />Bộ Công Thương</a></div>
+                </div>
+                <div class="ftrCopyright">
+                    <div class="CopyrightText">Rao vặt 24h © 2025
+                        Đăng tin nhanh miễn phí, tin bất động sản, mua bán nhà đất, việc làm, tuyển dụng, tuyển sinh, dịch vụ, quảng cáo,điện thoại, laptop, điện máy, xe máy, ô tô, chợ đồ cũ giá rẻ...
+Rao vặt 24h chỉ chuyển tải thông tin. Không chịu bất kỳ trách nhiệm nào từ các tin này. </div>
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/bootstrap/dist/js/jquery.min.js"><\/script>')</script>
+    <script src="js/dangtin.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const avatar = document.getElementById("usrAvt");
+            const box = document.getElementById("usrAvtText");
+
+            avatar.addEventListener("click", function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                box.style.display =
+                    box.style.display === "block" ? "none" : "block";
+            });
+
+            document.addEventListener("click", function () {
+                box.style.display = "none";
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const isLogin =
+                localStorage.getItem("isLogin") === "true" ||
+                sessionStorage.getItem("isLogin") === "true";
+
+            const user =
+                JSON.parse(localStorage.getItem("currentUser")) ||
+                JSON.parse(sessionStorage.getItem("currentUser"));
+
+            const userBox = document.getElementById("userLoggedBox");
+            const loginMenu = document.getElementById("loginMenu");
+            const postAdBtn = document.getElementById("postAdBtn");
+
+            if (isLogin && user) {
+                if (userBox) userBox.style.display = "block";
+                if (postAdBtn) postAdBtn.style.display = "block";
+                if (loginMenu) loginMenu.style.display = "none";
+
+                const nameEl = document.querySelector(".usr-name");
+                const emailEl = document.querySelector(".user-email");
+
+                if (nameEl) nameEl.innerHTML = `<i class='fa fa-info-circle fa-fw'></i> ${user.username}`;
+                if (emailEl) emailEl.innerHTML = `<i class='fa fa-envelope fa-fw'></i> ${user.email}`;
+
+            } else {
+                if (userBox) userBox.style.display = "none";
+                if (postAdBtn) postAdBtn.style.display = "none";
+                if (loginMenu) loginMenu.style.display = "block";
+            }
+        });
+    </script>
+
+    <script>
+        function logout() {
+            if (!confirm("Bạn có chắc muốn đăng xuất?")) return;
+
+            localStorage.removeItem("isLogin");
+            localStorage.removeItem("currentUser");
+            sessionStorage.clear();
+
+            window.location.href = "login.html";
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        let Gmap = false;
+        let mapMarker;
+        let myLatLng = { lat: 12.248866, lng: 109.195850 };
+        let GMloaded = false;
+        function initMap() {
+            if ($('#map').val() === undefined) return;
+
+            if (!Gmap) {
+                Gmap = new google.maps.Map(document.getElementById('map'), {
+                    center: myLatLng,
+                    zoom: 13
+                });
+            }
+
+            mapMarker = new google.maps.Marker({
+                position: myLatLng,
+                map: Gmap,
+                draggable: true
+            });
+
+            google.maps.event.addListener(Gmap, 'dblclick', function (event) {
+                mapMarker.setPosition(Gmap.getCenter());
+            });
+            Gmap.addListener('click', function (event) {
+                Gmap.setCenter(event.latLng);
+
+                console.log(event.latLng.lat);
+            });
+
+            GMloaded = true;
+        }
+
+        function showGMarker() {
+            if (typeof mapMarker === 'undefined' || typeof Gmap === 'undefined') return;
+            mapMarker.setPosition(Gmap.getCenter());
+
+        }
+    </script>
+    <script data-cfasync="false"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo49f6xdk7HElktuBeYisZZp54kMcbYK4&callback=" async
+        defer></script>
+
+    <script type="text/javascript">
+        $('#siteprice').maskMoney({ precision: 1 });
+        function btnUploadAll_Click(obj) { modalDialog('Chọn "Đăng tin" để đăng bản tin kèm hình ảnh!') }
+        function extClearQueue() {
+            $.ajax({
+                url: '/ajax-upload-session.php',
+                type: "POST",
+                data: { "clr": 1 },
+                success: function (text) {
+                    $('#uplSess').html(text);
+                }
+            });
+        }
+        noscroll = 1;
+        var jwt = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiOTczNTEzIiwiaWF0IjoxNzY0MDM4MjA0LCJleHAiOjE3NjQxMjQ2MDQsInNzaWQiOiJ2ZHJyOHIxZDBlOHVvY3UzOTdmbGtuNjZrcyJ9.FIVRtnQ3z3-8QWfWyTe5U6S0mfJbj0AvNW_Oj7wPSrg';
+        $(window).load(function () {
+            initMap();
+
+        });
+        noscroll = 0;
+
+        $("#findMeGeo").on("click", function () {
+            if ("geolocation" in navigator) {
+                $("#markerPos").html("\u0110ang t\u00ecm ki\u1ebfm..."); let b; navigator.geolocation.getCurrentPosition(function (a) { b = a; myLatLng = { lat: b.coords.latitude, lng: b.coords.longitude }; "undefined" !== typeof Gmap && (Gmap.setCenter(myLatLng), showGMarker(), $("#markerPos").html('\u0110\u00e3 t\u00ecm th\u1ea5y, nh\u1edb ch\u1ecdn "L\u01b0u v\u1ecb tr\u00ed" n\u1ebfu mu\u1ed1n c\u1eadp nh\u1eadt!')) }, function (a) { console.log(a.code); switch (a.code) { case 1: modalDialog('B\u1ea1n ph\u1ea3i ch\u1ecdn "Allow" \u0111\u1ec3 s\u1eed d\u1ee5ng ch\u1ee9c n\u0103ng n\u00e0y!') }$("#markerPos").html("C\u00f3 l\u1ed7i khi s\u1eed d\u1ee5ng ch\u1ee9c n\u0103ng n\u00e0y!") },
+                    { maximumAge: 3E5 })
+            } else modalDialog("T\u00ednh n\u0103ng t\u00ecm v\u1ecb tr\u00ed c\u1ee7a b\u1ea1n kh\u00f4ng h\u1ed7 tr\u1ee3!")
+        });
+
+    </script>
+
+</body>
+
+</html>
